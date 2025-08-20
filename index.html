@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página web de ebanistería y carpintería El Triángulo">
+  <meta name="keywords" content="ebanistería, carpintería, madera, muebles, diseño">
+  <meta name="author" content="Yuly Karinna Mogollon Corredor">
+  <title>Inicio - Ebanistería y Carpintería el Triángulo</title>
+
+  <link rel="icon" href="media/favicon/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/Styles.css">
+
+</head>
+
+<body>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="left">
+      <i class="fas fa-phone-alt"></i> <a href="tel:+34123456789">+34 123 456 789</a>
+    </div>
+    <div class="right">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <!-- NAVEGACIÓN -->
+    <nav class="nav container" aria-label="Menú principal">
+      <div class="nav_brand">
+        <a href="index.html" class="nav_logo-link" aria-label="Página principal">
+          <img src="media/imagenes/logo/logo_el_triangulo.png" alt="Logo de la empresa" class="nav_logo"></a>
+        <!--<h1 class="nav_title">Ebanistería y Carpintería el Triángulo</h1>-->
+      </div>
+
+      <button class="nav_toggle" id="nav_toggle" aria-expanded="false" aria-controls="nav_menu" aria-label="Abrir menú">
+        ☰ </button>
+
+      <ul class="nav_link nav_link--menu" id="nav_menu" role="menu">
+        <li class="nav_items"><a href="index.html" class="nav_links" role="menuitem">INICIO</a></li>
+        <li class="nav_items"><a href="#sobre_nosotros" class="nav_links" role="menuitem">SOBRE NOSOTROS</a></li>
+        <li class="nav_items"><a href="#catalogo_muebles" class="nav_links" role="menuitem">CATALOGO</a></li>
+        <li class="nav_items"><a href="#contacto" class="nav_links" role="menuitem">CONTACTO</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- VIDEO CAROUSEL -->
+    <div class="video_carousel">
+      <video class="carousel_video active" autoplay muted loop playsinline>
+        <source src="media/video/header/trabajo_en_taller_corte_madera.mp4" type="video/mp4">
+      </video>
+      <video class="carousel_video" muted loop playsinline>
+        <source src="media/video/header/limpieza_taller.mp4" type="video/mp4">
+      </video>
+      <video class="carousel_video" muted loop playsinline>
+        <source src="media/video/header/tinte_sobre_madera.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- TEXTO SOBRE VIDEO -->
+    <section class="hero_container container" aria-label="Bienvenida">
+      <h1 class="hero_title">Ebanistería y Carpintería El Triángulo</h1>
+      <p class="hero_paragraph">Transformamos tus ideas en muebles de calidad artesanal.</p>
+      <a href="#contacto" class="cotizacion">Solicita tu cotización</a>
+    </section>
+  </header>
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- SECCIÓN: SOBRE NOSOTROS -->
+    <section class="sobre_nosotros container" id="sobre_nosotros">
+      <div class="sobre-nosotros_contenido">
+        <h2>Diseños Únicos en Madera Natural</h2>
+        <br>
+        <br>
+        <br>
+        <p>En Ebanistería y Carpintería El Triángulo, convertimos la madera en arte. Con más de 20 años de experiencia,
+          creamos soluciones a medida que dan vida a cada espacio, combinando diseño y calidad.</p>
+        <p>Trabajamos con materiales de alta calidad y cuidamos cada detalle, desde el diseño hasta la instalación,
+          asegurando resultados duraderos y estéticamente únicos.</p>
+        <br>
+        <blockquote><strong>Si puedes imaginarlo</strong>, nosotros podemos hacerlo realidad.</blockquote>
+        <br>
+      </div>
+
+      <div class="sobre-nosotros__imagenes">
+        <!-- Elementos decorativos -->
+        <div class="decoracion decoracion-linea"></div>
+        <div class="decoracion decoracion-puntos"></div>
+        <div class="decoracion decoracion-barra"></div>
+
+        <!-- Imágenes -->
+        <div class="img-principal">
+          <img src="media/imagenes/sobre_nosotros/arreglo-de-piezas-de-madera-en-atelier.jpg"
+            alt="Foto del carpintero trabajando">
+        </div>
+        <div class="img-secundaria">
+          <img src="media/imagenes/sobre_nosotros/corte_de_madera.jpg" alt="Mesa de madera moderna">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN: NUESTRO CATALOGO -->
+
+    <section class="catalogo_muebles container">
+      <h2> Nuestro Catálogo</h2>
+      <br>
+      <br>
+      <p> Explora nuestro catálogo y solicita tu presupuesto.</p>
+
+      <div class="catalogo_muebles_carousel" id="catalogo_muebles">
+        <div class="muebles-track">
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/armario_empotrado.jpg" alt="Armarios y closets"
+              class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Armarios y Clósets</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Espacios organizados y elegantes que maximizan cada rincón de tu hogar.</p>
+              <a href="Nuestro_Catalago.html" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/baños_modernos.jpg" alt="Muebles para baño"
+              class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Muebles para baño</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Detalles funcionales y modernos que renuevan tu baño con estilo.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/biblioteca_madera.jpg" alt="Bibliotecas" class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Bibliotecas</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Estanterías que exhiben tus libros y decoran con personalidad.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/cocina_integral_madera.jpg" alt="Cocinas" class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Cocinas</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Cocinas integrales a medida y modernas donde cocinar se disfruta más.</p>
+              <a href="Cocinas_integrales.html" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/comedor_clasico.jpg" alt="Comedor" class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Comedor</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Muebles acogedores que reúnen familia y amigos para compartir momentos
+                inolvidables.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/escaleras_madera.jpg" alt="Escaleras" class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Escaleras</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Escaleras de diseño que optimizan el espacio y embellecen tu hogar.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/juego_de_cama.jpg" alt="Dormitorios" class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Dormitorios</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Muebles de descanso hechos a medida para mayor confort y calidez para
+                descansar.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="carousel_muebles-item">
+            <img src="media/imagenes/galeria/categorias_galeria/puertas_y_ventanas.jpg" alt="Puertas y ventanas"
+              class="image">
+            <div class="info">
+              <h3 class="catalogo_subtitles">Puertas y ventanas</h3>
+              <div class="linea-division"></div>
+              <p class="descripcion_mueble">Puertas y ventanas que aportan seguridad y diseño a tu hogar.</p>
+              <a href="#" class="leer_mas">Leer más <span class="flecha">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel_buttons">
+          <button class="carousel_muebles-button prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel_muebles-button next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN: CÓMO TRABAJAMOS -->
+    <section class="proceso container" id="contacto">
+      <h2>Metodologia de trabajo</h2>
+
+      <div class="pasos-container">
+        <div class="pasos">
+          <div class="icono">
+            <img src="media/imagenes/icons/contacto_icon.png" alt="icono de Contacto">
+          </div>
+          <h3>1. Contacto</h3>
+          <p> Comunicación inicial con el cliente.</p>
+        </div>
+        <div class="pasos">
+          <div class="icono">
+            <img src="media/imagenes/icons/diseño_icon.png" alt="icono de Diseño">
+          </div>
+          <h3>2. Diseño</h3>
+          <p>Propuesta de diseño a medida del espacio para optimizarlo.</p>
+        </div>
+        <div class="pasos">
+          <div class="icono">
+            <img src="media/imagenes/icons/fabricacion_icon.png" alt="icono de Fabricación">
+          </div>
+          <h3>3. Fabricación</h3>
+          <p>Uso de materiales de calidad con acabados artesanales.</p>
+        </div>
+        <div class="pasos">
+          <div class="icono">
+            <img src="media/imagenes/icons/instalacion_icon.png" alt="icono de Instalación">
+          </div>
+          <h3>4. Instalación</h3>
+          <p> Instalación y entrega en el hogar.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN: UBICACIÓN / FORMULARIO -->
+    <section id="ubica_formulario">
+      <h2> Contacta con nosotros </h2>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1c-hpP_fxer_LBGpiAmJMHEKs8OsqtO8&ehbc=2E312F&noprof=1"
+        width="700" height="500"></iframe>
+
+      <form action="procesar-formulario.php" method="POST">
+
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+
+        <input type="tel" name="telefono" placeholder="Teléfono">
+
+        <select name="servicio">
+          <option value="Selecciona"> Seleccione el tipo de servicio:</option>
+          <option value="carpinteria">Carpintería general</option>
+          <option value="muebles">Muebles a medida</option>
+          <option value="restauracion">Restauración</option>
+          <option value="instalacion">Instalación de puertas/ventanas</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <textarea name="mensaje" rows="5" placeholder="Dejanos un mensaje o descripción del trabajo adicional"
+          required></textarea>
+
+        <div class="capacheckbox">
+          <p>Preferencia de contacto:</p>
+          <label><input type="checkbox" name="contacto[]" value="telefono"> Teléfono</label>
+          <label><input type="checkbox" name="contacto[]" value="email"> Email</label>
+          <label><input type="checkbox" name="contacto[]" value="whatsapp"> WhatsApp</label>
+        </div>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="custom-footer">
+    <div class="footer-section footer_brand">
+      <a href="index.html">
+        <h3> Ebanistería y Carpintería el Triángulo </h3>
+      </a>
+      <p>Diseñamos y fabricamos en madera cada espacio de tu hogar.</p>
+      <nav class="footer-social" aria-label="Redes sociales">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+    </div>
+
+    <div class="footer-section">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+      </ul>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <div class="footer-section">
+      <h4>Nuestro catálogo</h4>
+      <div class="footer-services-columns">
+        <ul>
+          <li><a href="#">Armarios</a></li>
+          <li><a href="#">Baños</a></li>
+          <li><a href="#">Bibliotecas y librerías</a></li>
+          <li><a href="Cocinas_integrales.html">Cocinas</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Comedores</a></li>
+          <li><a href="#">Dormitorios</a></li>
+          <li><a href="#">Escaleras y barandillas</a></li>
+          <li><a href="#">Puertas y ventanas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-section" id="footer">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="mailto:info@carpinteria.com">info@carpinteria.com</a></li>
+        <li><a href="tel:+34123456789">+34 123 456 789</a></li>
+        <li>
+          <address>Villapinzon, Colombia</address>
+        </li>
+      </ul>
+      <br>
+      <br>
+    </div>
+  </footer>
+
+  <!-- COPYLEFT -->
+  <div class="footer-copy">
+    <p>&copy; 2025 Ebanistería y Carpintería el Triángulo. Todos los derechos reservados.</p>
+  </div>
+
+
+  <script src="java/main.js"></script>
+
+</body>
+
+</html>
