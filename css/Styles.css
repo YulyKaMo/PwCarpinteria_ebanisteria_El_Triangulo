@@ -444,6 +444,10 @@ footer {
   text-decoration: none;
 }
 
+.footer-nav{
+  margin-left: 35%;
+}
+
 .footer-nav a{
   font-size: 1.2rem;
   text-decoration: none;
