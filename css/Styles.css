@@ -480,3 +480,18 @@ footer {
   background: var(--color-hover);
   color: var(--footer-bg);
 }
+
+
+/*PAGINA CATALOGO*/
+
+.img-catalogo {
+  width: 80%;           
+  height: 500px;         
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .img-catalogo {
+    height: 250px;
+  }
+}
