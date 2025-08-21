@@ -52,6 +52,7 @@
             <li class="nav-item px-3"><a href="index.html" class="nav-link">INICIO</a></li>
             <li class="nav-item px-3"><a href="#sobre_nosotros" class="nav-link">SOBRE NOSOTROS</a></li>
             <li class="nav-item px-3"><a href="#catalogo_muebles" class="nav-link">CATALOGO</a></li>
+            <li class="nav-item px-3"><a href="#servicios" class="nav-link">SERVICIOS</a></li>
             <li class="nav-item px-3"><a href="#contacto" class="nav-link" r>CONTACTO</a> </li>
           </ul>
         </div>
@@ -258,7 +259,7 @@
           <div class="icono">
             <img src="media/imagenes/icons/diseño_icon.png" alt="icono de Diseño">
           </div>
-          <h3>1. Diseño</h3>
+          <h3>1. Diseño personalizado</h3>
           <p>Proyectos únicos adaptados a cada cliente.</p>
         </div>
         <div class="pasos">
@@ -285,84 +286,19 @@
       </div>
     </section>
 
-    <section id="contacto">
-            <div class="contacto">
-                <h2>Descubre diseños esclusivos y contactanos</h2>
-                <address>
-                    <img src="img/icon/call.png">666 444 555
-                    <img src="img/icon/mail.png"> artesaneo@aaw.org
-                    <img src="img/icon/owl.png">La Lloreria 5, 5ºB.
-                </address>
-            </div>
-
-            <form action="recogerdatos.php" method="POST">
-                <h3>¿Te interesa una pieza única o tienes alguna duda?</h3>
-                <p>Déjanos tus datos y te contactamos pronto.</p>
-
-                <input type="text" name="nombre" placeholder="Nombre y apellidos" title=" Escribe tu nombre completo"
-                    required>
-
-                <input type="email" name="email" placeholder="Correo electrónico"
-                    title="Ingresa tu dirección de correo electrónico (ej: nombre@ejemplo.com)" required>
-
-                <div class="telefono">
-                    <input type="text" id="indicativo" name="indicativo" placeholder="+34" value="+34" readonly>
-                    <input type="tel" name="telefono" placeholder="Teléfono" pattern="^[6789][0-9]{8}$" maxlength="9"
-                        title="Numero de telefono debe comenzar con 6,7,8 o 9" required>
-                </div>
-
-                <textarea name="mensaje" rows="5" placeholder="Dejanos un mensaje"></textarea>
-
-                <div class="capacheck">
-                    <input type="checkbox" name="politica_privacidad" id="politica_privacidad" > <label
-                        for="politica_privacidad"> He leído y acepto la <a
-                            href="https://protecciondatos-lopd.com/empresas/politica-de-privacidad-web/"
-                            target="_blank"> política de privacidad </a></label>
-                </div>
-
-                <div class="capabotones">
-                    <button type="submit" value="Enviar">Enviar</button>
-                </div>
-            </form>
-        </section>
-
-    <!-- SECCIÓN: UBICACIÓN / FORMULARIO 
-    <section class="p-5" id="contacto">
-      <h2> Contacta con nosotros </h2>
-      <iframe src="https://www.google.com/maps/d/embed?mid=1c-hpP_fxer_LBGpiAmJMHEKs8OsqtO8&ehbc=2E312F&noprof=1"
-        width="700" height="500"></iframe>
-
-      <form action="procesar-formulario.php" method="POST">
-
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-
-        <input type="tel" name="telefono" placeholder="Teléfono">
-
-        <select name="servicio">
-          <option value="Selecciona"> Seleccione el tipo de servicio:</option>
-          <option value="carpinteria">Carpintería general</option>
-          <option value="muebles">Muebles a medida</option>
-          <option value="restauracion">Restauración</option>
-          <option value="instalacion">Instalación de puertas/ventanas</option>
-          <option value="otro">Otro</option>
-        </select>
-
-        <textarea name="mensaje" rows="5" placeholder="Dejanos un mensaje o descripción del trabajo adicional"
-          required></textarea>
-
-        <div class="capacheckbox">
-          <p>Preferencia de contacto:</p>
-          <label><input type="checkbox" name="contacto[]" value="telefono"> Teléfono</label>
-          <label><input type="checkbox" name="contacto[]" value="email"> Email</label>
-          <label><input type="checkbox" name="contacto[]" value="whatsapp"> WhatsApp</label>
+    <section class="container p-5" id="contacto">
+      <div class="row p-4 m-5 text-center">
+        <h2 class="mb-4">Descubre diseños esclusivos y contactanos</h2>
+        <div class="col-md mt-4 d-flex align-items-center justify-content-center">
+          <i class="fa-brands fa-whatsapp fa-2x me-2" style="color: #f4d35e;"></i> 
+          <p class="mb-0" >3143177855 </p>
         </div>
-
-        <button type="submit">Enviar solicitud</button>
-      </form>
-    </section--> 
-
+        <div class="col-md mt-4 d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-location-dot fa-2x me-2" style="color: #f4d35e;"></i> 
+          <p class="mb-0">Villapinzon, Cundinamarca </p>
+        </div>
+      </div>
+    </section>
   </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
