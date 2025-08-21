@@ -73,6 +73,7 @@ h2::after {
 }
 
 /*TOPBAR*/
+
 .topbar {
   font-size: 1.2em;
   padding: 10px 3%;
@@ -94,13 +95,11 @@ h2::after {
   color: white;
   transition: color 0.3s;
   text-decoration: none;
-
 }
 
 .topbar a:hover {
   color: var(--color-hover);
 }
-
 
 /*HERO*/
 .hero{
@@ -161,9 +160,6 @@ h2::after {
 .nav-link:hover {
   color: #f4d35e;
   transform: translateY(-2px) scale(1.05);
-  background: rgba(139, 69, 19, 0.2);
-  /* fondo translúcido café suave */
-  backdrop-filter: blur(2px);
 }
 
 .nav-link:hover::after {
@@ -219,6 +215,7 @@ h2::after {
 }
 
 /* BOTÓN COTIZACION */
+
 .cotizacion {
   display: inline-block;
   background-color: transparent;
@@ -256,6 +253,7 @@ h2::after {
 }
 
 /*SOBRE NOSOTROS*/
+
 blockquote {
   font-size: 1.3em;
   font-style: italic;
@@ -289,24 +287,6 @@ blockquote {
 
 .card-title{
   color: var(--color-primary);
-}
-
-
-/* Botones del catalogo */
-.btn { 
-  color: white;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover,
-.btn:focus {
-  background: var(--color-hover);
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
 }
 
 .card{
@@ -347,6 +327,24 @@ blockquote {
   text-decoration: underline;
   color: var(--color-primary);
   outline: none;
+}
+
+/* BOTONES DE CATALOGO */
+
+.btn { 
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--color-hover);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* PROCESO */
@@ -424,7 +422,6 @@ blockquote {
   color: var(--color-primary);
 }
 
-
 /*CONTACTO*/
 
 #contacto {
@@ -432,4 +429,50 @@ blockquote {
   margin: 5em auto;
   max-width: 900px;
   box-shadow: 0 8px 24px rgba(30, 30, 29, 0.3);
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.footer-title {
+  color: var(--color-title);
+  text-decoration: none;
+}
+
+.footer-nav a{
+  font-size: 1.2rem;
+  text-decoration: none;
+  color:var(--color-primary);
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--color-hover); /* color al pasar el mouse */
+  text-decoration: underline;
+  outline: none;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--color-hover);
+  color: var(--footer-bg);
 }
