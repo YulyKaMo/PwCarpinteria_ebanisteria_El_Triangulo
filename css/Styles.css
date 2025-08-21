@@ -426,7 +426,7 @@ blockquote {
 
 
 
-#contactanos {
+#contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
@@ -439,7 +439,7 @@ blockquote {
   text-align: center;
 }
 
-#contactanos h2 {
+#contacto h2 {
   padding-top: 15%;
   color: var(--title-color);
   font-size: 2.5rem;
@@ -447,7 +447,7 @@ blockquote {
   text-transform: uppercase;
 }
 
-#contactanos h2::after {
+#contacto h2::after {
   content: '';
   display: block;
   width: 250px;
@@ -457,11 +457,11 @@ blockquote {
   border-radius: 2px;
 }
 
-#contactanos .contacto {
+#contacto .contacto {
   grid-column: 1/2;
 }
 
-#contactanos .contacto address {
+#contacto .contacto address {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-style: normal;
@@ -470,13 +470,13 @@ blockquote {
   margin-right: 25%;
 }
 
-#contactanos img {
+#contacto img {
   width: 30px;
   height: 30px;
   margin-left: 80%;
 }
 
-#contactanos form {
+#contacto form {
   grid-column: 2/3;
   display: flex;
   flex-direction: column;
