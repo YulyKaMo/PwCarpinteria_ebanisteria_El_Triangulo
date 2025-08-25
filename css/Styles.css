@@ -1,6 +1,5 @@
 :root {
   --bs-body-bg: #fdfdfd;
-  --bs-body-color: #291e16;
 
   --primary-color: #d9ac84;
   --bs-secondary: #8c593b;
@@ -16,10 +15,15 @@
   --footer-bg: #0d1b2a;
   --color_texts: #0a0a0a;
   --color-primary: #fff;
+  --bg-sections:#8c593b;
 }
 
 .bg-azulOscuro{
     background-color: #0d1b2a !important;
+}
+
+.bg-success{
+  background-color: rgba(149, 108, 62, 0.8) !important;
 }
 
 body {
@@ -270,6 +274,8 @@ blockquote {
   }
 }
 
+
+
 /*CATALOGO*/
 
 .catalogo_muebles {
@@ -510,5 +516,5 @@ footer {
   max-height: 530px;   
   border-radius: 10px;
   scroll-snap-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
 }
