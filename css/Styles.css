@@ -111,14 +111,11 @@ h2::after {
   position: relative;
   align-items: center;
   color: white;
-  position: relative;
+ 
 }
 
 .hero::before{
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   background-size: cover;
   background-position: center;
   z-index: -1;
