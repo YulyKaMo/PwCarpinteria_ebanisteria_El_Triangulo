@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de ebanistería y carpintería El Triángulo">
+    <meta name="keywords" content="ebanistería, carpintería, madera, muebles, diseño, fabricacion muebles">
+    <meta name="author" content="Yuly Karinna Mogollon Corredor">
+    <title>Inicio - Ebanistería y Carpintería el Triángulo</title>
+
+    <link rel="icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/styles_catalogo.css">
+
+  </head>
+
+  <body>
+    <!-- TOPBAR -->
+    <div class="topbar bg-azulOscuro text-white py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="left d-flex align-items-center gap-2">
+         <a href="tel:+573143177855" class="text-white" aria-label="Telefono"><i class="fa-solid fa-phone"></i></a>
+          <a href="tel:+573143177855" class="text-white text-decoration-none">+57 314 317 7855</a>
+        </div>
+        <div class="right d-flex align-items-center gap-3">
+          <a href="https://wa.me/573213952376" target="_blank" class="text-white me-2" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:carpinteria.triangulo@gmail.com" target="_blank" class="text-white me-2" aria-label="Correo electrónico"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.google.com/maps?q=5.216165,-73.606055" target="_blank" class="text-white" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+
+    <header class="hero position-relative text-white" id="inicio">
+      <!-- NAVEGACIÓN -->
+      <nav class="navbar navbar-expand-lg slide-down" aria-label="Menú principal">
+        <div class="container-fluid d-flex align-items-center justify-content-between px-3">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Página principal">
+            <img src="media/imagenes/logo/logo_el_triangulo.png" alt="Logo de la empresa" style="width: 150px;" class="rounded-pill"></a>
+        
+          <!-- Botón hamburguesa -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
+            <i class="fas fa-bars fa-2x" style="color: #B47927;"></i>
+          </button>
+
+          <!-- Menú colapsado para pantallas grandes -->
+          <div class="collapse navbar-collapse d-none d-lg-block">
+            <ul class="navbar-nav ms-auto px-5">
+              <li class="nav-item mx-2"><a href="index.html" class="nav-link">INICIO</a></li>
+              <li class="nav-item mx-2"><a href="index.html#sobre_nosotros" class="nav-link">SOBRE NOSOTROS</a></li>
+              <li class="nav-item mx-2"><a href="index.html#servicios" class="nav-link">SERVICIOS</a></li>
+              <li class="nav-item mx-2"><a href="#cat_catalogo" class="nav-link active">CATÁLOGO</a></li>
+              <li class="nav-item mx-2 pe-4"><a href="index.html#contacto" class="nav-link">CONTACTO</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menú lateral (offcanvas) para móviles -->
+      <div class="offcanvas offcanvas-end w-50 bg-azulOscuro" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title titulo-menulateral" id="menuLateralLabel">CARPINTERIA Y EBANISTERIA EL TRIANGULO</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-movil">
+            <li class="nav-item"><a href="index.html" class="nav-link text-white">INICIO</a></li>
+            <li class="nav-item"><a href="#sobre_nosotros" class="nav-link text-white">SOBRE NOSOTROS</a></li>
+            <li class="nav-item"><a href="#servicios" class="nav-link text-white">SERVICIOS</a></li>
+            <li class="nav-item"><a href="#catalogo" class="nav-link text-white">CATÁLOGO</a></li>
+            <li class="nav-item"><a href="#contacto" class="nav-link text-white">CONTACTO</a></li>
+          </ul>
+          <div class="d-flex justify-content-center pt-4">
+            <ul class="list-inline mt-3 ">
+            <li class="social-icons list-inline-item"><a href="https://wa.me/573213952376" target="_blank" class="text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="social-icons list-inline-item"><a href="mailto:carpinteria.triangulo@gmail.com" target="_blank" class="text-white" aria-label="Correo electrónico"><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li class="social-icons list-inline-item"><a href="https://www.google.com/maps?q=5.216165,-73.606055" target="_blank" class="text-white" aria-label="Ubicación"><i class="fas fa-map-marker-alt fa-lg"></i></a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- SECCIÓN: CATALOGO -->
+    <section class="catalogo_muebles p-5" id="catalogo_muebles">
+      <h2  > Nuestro Catálogo</h2>
+      <br>
+      <br>
+      <p class="card-title"> Explora nuestro catálogo y solicita tu presupuesto.</p>
+      
+      <!-- Controles -->
+      <div class="d-flex justify-content-end pe-2">
+        <button class="btn me-3" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn" type="button" data-bs-target="#cardCarousel" data-bs-slide="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/armario_empotrado.jpg" class="card-img-top" alt="Armarios y closets"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Armarios y Clósets</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Espacios organizados y elegantes que maximizan cada rincón de tu hogar.</p>
+                    <a href="/catalogo.html#catalogo_armarios" class="ver_mas">Ver más</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/biblioteca_madera.jpg" class="card-img-top" alt="Bibliotecas"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Bibliotecas</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Estanterías que exhiben tus libros y decoran con personalidad.</p>
+                    <a href="/catalogo.html#catalogo_biblioteca" class="ver_mas">Ver más </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/cocina_integral_madera.jpg" class="card-img-top" alt="Cocinas"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Cocinas</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Cocinas integrales a medida y modernas donde cocinar se disfruta más.</p>
+                    <a href="/catalogo.html#catalogo_cocinas" class="ver_mas">Ver más </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/comedor_clasico.jpg" class="card-img-top" alt="Comedor"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Comedor</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Muebles acogedores que reúnen familia y amigos para compartir momentos inolvidables.</p>
+                    <a href="/catalogo.html#catalogo_comedor" class="ver_mas">Ver más</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/dormitorio_sencillo.jpg" class="card-img-top" alt="Dormitorios"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Dormitorios</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Muebles de descanso hechos a medida para mayor confort y calidez para descansar.</p>
+                    <a href="/catalogo.html#catalogo_dormitorio" class="ver_mas">Ver más</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/escaleras_madera.jpg" class="card-img-top" alt="Escaleras"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Escaleras</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Escaleras de diseño que optimizan el espacio y embellecen tu hogar.</p>
+                    <a href="/catalogo.html#catalogo_escaleras" class="ver_mas">Ver más</a>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/baños_modernos.jpg" class="card-img-top" alt="Muebles para baño"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Muebles para baño</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Detalles funcionales y modernos que renuevan tu baño con estilo.</p>
+                    <a href="/catalogo.html#catalogo_baños" class="ver_mas">Ver más </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/espejos_muebles.jpg" class="card-img-top" alt="Muebles con espejos"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Muebles con espejos </h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Muebles modernos con espejos.</p>
+                    <a href="/catalogo.html#catalogo_espejos" class="ver_mas">Ver más</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card m-2">
+                  <img src="media/imagenes/galeria/categorias_galeria/puertas_y_ventanas.jpg" class="card-img-top" alt="Puertas y ventanas"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Puertas y ventanas</h5>
+                    <div class="linea-division"></div>
+                    <p class="card-text">Puertas y ventanas que aportan seguridad y diseño a tu hogar.</p>
+                    <a href="/catalogo.html#catalogo_puertas_ventanas" class="ver_mas">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER-->
+    <footer class="mt-auto pb-0 bg-azulOscuro">
+      <div class="container py-4">
+        <div class="row gy-4">
+          <div class="col-12 col-md-6">
+            <a class="footer-title" href="index.html"> <h1 class=" text-center">Ebanistería y Carpintería El Triángulo</h1> </a>
+          </div>
+          <div class="col-12 col-md-6 pt-3">
+            <ul class="list-unstyled d-flex align-items-center justify-content-center flex-wrap gap-5">
+              <li class="footer-nav"><a href="index.html">Inicio</a></li>
+              <li class="footer-nav"><a href="#sobre_nosotros">Sobre nosotros</a></li>
+              <li class="footer-nav"><a href="#servicios">Servicios</a></li>
+              <li class="footer-nav"><a href="#catalogo_muebles">Catálogo</a></li>
+            </ul>
+          </div>
+            <ul class="list-inline d-flex align-items-center justify-content-center gap-3">
+              <li class="social-icons list-inline-item"><a href="https://wa.me/573213952376" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                <li class="social-icons list-inline-item"><a href="mailto:carpinteria.triangulo@gmail.com" target="_blank" aria-label="Correo electrónico"><i class="fas fa-envelope"></i></a></li>
+                <li class="social-icons list-inline-item"><a href="https://www.google.com/maps?q=5.216165,-73.606055" target="_blank" aria-label="Ubicación"><i class="fas fa-map-marker-alt"></i></a></li>
+              </ul>
+            </div>
+
+          <hr class="mb-2">
+          <div class="row">
+            <div class="col-md-12 text-center pt-3">
+              <p class="fs-6 text-white">&copy; 2025 Ebanistería y Carpintería El Triángulo. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <a href="#inicio" class="btn-scroll-top" aria-label="Volver al inicio">
+      <i class="fas fa-angles-up"></i>
+    </a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="java/main.js"></script>
+  </body>
+</html>
+
