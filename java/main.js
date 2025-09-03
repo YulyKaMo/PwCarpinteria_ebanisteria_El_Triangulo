@@ -21,3 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const offcanvas = document.getElementById('menuLateral');
+  const btnScrollTop = document.querySelector('.btn-scroll-top');
+
+  if (!offcanvas || !btnScrollTop) return;
+
+  offcanvas.addEventListener('show.bs.offcanvas', () => {
+    if (window.innerWidth < 768) {
+      btnScrollTop.style.display = 'none';
+    }
+  });
+
+  offcanvas.addEventListener('hide.bs.offcanvas', () => {
+    if (window.innerWidth < 768) {
+      btnScrollTop.style.display = 'block';
+    }
+  });
+});
+
+
