@@ -1,0 +1,118 @@
+:root {
+  --color-title: #884d0d;
+  --color-hover: #d9b21a; 
+  --color-enlacehover:#f4d35e;
+  --color-nav-hover: #b47927;
+  --color_texts: #341a0c;
+  --color-primary: #fff;
+}
+
+/*PAGINA CATALOGO*/
+
+.nav-link {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  z-index: 0;
+}
+
+.nav-link.active {
+  color: var(--color-nav-hover) !important;
+  border-bottom: 3px solid #8c4c2c;
+}
+
+.navbar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent; /* o semi-transparente si lo deseas */
+}
+
+.carousel-indicators button {
+  background-color: #fff;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+}
+
+.hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item img {
+  height: 70vh; 
+  object-fit: cover;
+}
+
+
+/*CATALOGO*/
+
+.catalogo_muebles {
+  background-color: rgba(72, 71, 71, 0.05);
+}
+
+.card-text{
+  font-size: 1.3em;
+  line-height: 1.6;
+  font-weight: normal;
+  color: var(--color_texts);
+}
+
+.card-subtext{
+  font-size: 1em;
+}
+
+
+.card-title{
+  color: #884d0d;
+}
+
+.card{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 8px;
+  overflow: visible;
+  padding: 5%;
+}
+
+.card-img-top {
+  opacity: 0.8;
+  width: 100%;
+  height: 260px;         
+  overflow: hidden;     
+  object-position: center; 
+  }
+
+.card-img-top:hover{
+  opacity: 1;
+}
+
+.linea-division {
+  width: 45%;
+  height: 2px;
+  background-color: #884d0d;
+  margin-bottom: 0.75rem;
+}
+
+/* BOTONES DE CATALOGO */
+
+.btn { 
+  color: var(--color-nav-hover);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgba(217, 178, 26, 0.2); ;
+  outline-offset: 2px;
+}
+
