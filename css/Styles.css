@@ -524,6 +524,9 @@ footer {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
+/*ANIMACIONES*/
+
 .btn-scroll-top:hover {
   transform: scale(1.1);
   animation: jump 0.3s ease forwards;
@@ -537,6 +540,82 @@ footer {
     transform: translateY(-10px);
   }
   100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  transform: translateY(5%);
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-400px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(400px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.paso-animado {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 }
