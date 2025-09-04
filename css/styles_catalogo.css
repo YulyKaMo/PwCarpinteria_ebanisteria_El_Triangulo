@@ -31,7 +31,7 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  background: transparent; /* o semi-transparente si lo deseas */
+  background: transparent; 
 }
 
 .carousel-indicators button {
@@ -86,9 +86,9 @@
 .card-img-top {
   opacity: 0.8;
   width: 100%;
-  height: 260px;         
-  overflow: hidden;     
-  object-position: center; 
+  height: 350px !important;
+  object-fit: cover !important;
+  object-position: center;
   }
 
 .card-img-top:hover{
@@ -116,5 +116,24 @@
 .btn:focus {
   background: rgba(217, 178, 26, 0.2); ;
   outline-offset: 2px;
+}
+
+/*MODAL*/
+
+.gallery-flex {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory; 
+}
+
+.gallery-flex img {
+  flex: 0 0 auto;
+  max-width: 100%;     
+  max-height: 530px;   
+  border-radius: 10px;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
