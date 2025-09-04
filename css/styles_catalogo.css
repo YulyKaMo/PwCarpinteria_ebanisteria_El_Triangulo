@@ -42,6 +42,8 @@
 }
 
 .hero {
+  height: 70vh;
+  max-height: 750px;
   overflow: hidden;
   position: relative;
 }
