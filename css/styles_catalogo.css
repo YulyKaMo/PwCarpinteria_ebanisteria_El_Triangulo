@@ -53,11 +53,45 @@
   object-fit: cover;
 }
 
+/*HERO*/
+
+.hero-section {
+  background: linear-gradient(135deg, #cf942d2e 0%, #cfa22f 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero-section h1 {
+  color: #4b2e0f; /* Marrón oscuro tipo nogal, elegante y fuerte */
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* Un leve sombreado para mejor legibilidad */
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  color: var(--color_texts);
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra sutil para que el texto resalte */
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: visible; /* para que no corte la máscara */
+}
+
+.img-difuminada {
+  max-height: 450px;
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%);
+}
 
 /*CATALOGO*/
 
 .catalogo_muebles {
-  background-color: rgba(72, 71, 71, 0.05);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 0;
+  position: relative;
 }
 
 .card-text{
@@ -84,12 +118,12 @@
 }
 
 .card-img-top {
-  opacity: 0.8;
   width: 100%;
   height: 350px !important;
   object-fit: cover !important;
   object-position: center;
-  }
+  cursor: pointer;
+}
 
 .card-img-top:hover{
   opacity: 1;
@@ -114,7 +148,7 @@
 
 .btn:hover,
 .btn:focus {
-  background: rgba(217, 178, 26, 0.2); ;
+  background: rgba(243, 198, 19, 0.2); ;
   outline-offset: 2px;
 }
 
