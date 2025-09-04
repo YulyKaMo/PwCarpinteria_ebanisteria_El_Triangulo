@@ -86,14 +86,6 @@
 
 /*CATALOGO*/
 
-.catalogo_muebles {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 80px 0;
-  position: relative;
-}
-
 .card-text{
   font-size: 1.3em;
   line-height: 1.6;
