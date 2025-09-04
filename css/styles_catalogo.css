@@ -73,6 +73,31 @@
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra sutil para que el texto resalte */
 }
 
+.hero-catalogo{
+    padding-top: 10%;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .hero-title-catalogo {
+    font-size: 2.2rem;
+  }
+
+  .hero-paragraphhero-catalogo {
+    font-size: 1.5rem;
+  }
+
+  .hero-catalogo{
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  #menuLateral .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+}
 .img-wrapper {
   position: relative;
   overflow: visible; /* para que no corte la máscara */
