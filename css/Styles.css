@@ -361,11 +361,6 @@ blockquote {
   border: 2px solid transparent; 
 }
 
-.card:hover {
-  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.8);
-  transform: translateY(-8px);
-}
-
 .link-catalogo {
   color: rgba(128, 128, 128, 0.7); /* Gris opaco */
   text-decoration: none;
@@ -445,7 +440,7 @@ textarea::placeholder {
   color: #555;
 }
 
-.punteado {
+.punteado {    /*enlace politica de privacidad*/
   color: var(--color-title);
   text-decoration: underline dotted;
   transition: color 0.3s;

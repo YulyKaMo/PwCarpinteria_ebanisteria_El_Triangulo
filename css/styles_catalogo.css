@@ -146,6 +146,11 @@
   opacity: 1;
 }
 
+.card:hover {
+  box-shadow: 0 12px 25px rgba(101, 67, 33, 0.5); /* sombra en café claro */
+  transform: translateY(-4px);
+}
+
 .linea-division {
   width: 45%;
   height: 2px;
