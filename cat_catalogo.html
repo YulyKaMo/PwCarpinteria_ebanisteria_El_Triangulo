@@ -134,7 +134,7 @@
           <button class="btn" type="button" data-bs-target="#cardCarousel" data-bs-slide="next"><i class="fas fa-chevron-right"></i></button>
         </div>
 
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div id="cardCarousel" class="carousel slide" data-bs-ride="false"> <!-- si quiero automatico: data-bs-ride="carousel" data-bs-interval="4000"-->
         <div class="carousel-inner">
           <!-- Slide 1 -->
           <div class="carousel-item active">
@@ -478,6 +478,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Controles de texto al final del carrusel -->
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn btn-link me-3 text-decoration-none" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev"> << Anterior
+          </button>
+          <button class="btn btn-link text-decoration-none" type="button" data-bs-target="#cardCarousel" data-bs-slide="next"> Siguiente >>
+          </button>
+        </div>  
       </section>
     </main>
 

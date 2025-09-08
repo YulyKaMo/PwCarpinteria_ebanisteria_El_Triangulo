@@ -169,6 +169,18 @@
   outline-offset: 2px;
 }
 
+.btn-link {
+  background-color: transparent !important;
+  border: none;
+}
+
+.btn-link:hover {
+  background-color: transparent !important;
+  border: none; 
+  color: var(--color-hover);
+  text-decoration: none;
+}
+
 /*MODAL*/
 
 .gallery-flex {

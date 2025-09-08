@@ -274,9 +274,9 @@ blockquote {
   }
 }
 
-/* PROCESO */
+/* servicios */
 
-.proceso {
+.servicios {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -292,7 +292,7 @@ blockquote {
   background-blend-mode: overlay;
 }
 
-.proceso h2 {
+.servicios h2 {
   margin-bottom: 3rem;
 }
 
@@ -512,7 +512,7 @@ footer {
 .btn-scroll-top {
   position: fixed;
   bottom: 30px;
-  right: 10px;
+  right: 30px;
   background-color: rgba(255, 255, 255, 0.0.5); /* Blanco opaco */
   color: #fff; /* Color del ^ */
   border-radius: 50%;
@@ -527,7 +527,7 @@ footer {
 
 /*ANIMACIONES*/
 
-.btn-scroll-top:hover {
+.btn-scroll-top:hover {  /*animacion boton inicio*/
   transform: scale(1.1);
   animation: jump 0.3s ease forwards;
 }
@@ -544,26 +544,13 @@ footer {
   }
 }
 
-.slide-down {
+.slide-down {     /*animacion barra nav y hero*/
   transform: translateY(-100%);
   opacity: 0;
   animation: slideDown 0.6s ease-out forwards;
 }
 
 @keyframes slideDown {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.slide-up {
-  transform: translateY(5%);
-  opacity: 0;
-  animation: slideUp 0.6s ease-out forwards;
-}
-
-@keyframes slideUp {
   to {
     transform: translateY(0);
     opacity: 1;
@@ -581,35 +568,48 @@ footer {
   }
 }
 
-.slide-in-left {
+.slide-in-left,        /* animacion seccion sobre nosotros*/
+.slide-in-right {
   opacity: 0;
-  transform: translateX(-400px);
+}
+
+.slide-in-left.active {  
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
+.slide-in-right.active {  
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+
 @keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20vw); 
+  }
   to {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(400px);
-  animation: slideInLeft 0.8s ease-out forwards;
 }
 
 @keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20vw);  
+  }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-.paso-animado {
+.paso-animado {   /*animacion seccion de servicios*/
   opacity: 0;
   transform: translateY(30px);
+}
+
+.paso-animado.active {
   animation: fadeUp 0.6s ease-out forwards;
 }
 
@@ -619,3 +619,53 @@ footer {
     transform: translateY(0);
   }
 }
+
+.card-animada {   /*animacion seccion catalogo*/
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.card-animada.active {
+  animation: fadeZoomIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeZoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-slide-up.active {
+  animation: fadeSlideUp 0.6s ease-out forwards;
+  animation-delay: var(--delay, 0s); 
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {         /*animacion seccion contacto*/
+  transform: translateY(10%);
+  opacity: 0;
+}
+
+.slide-up.active {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/*MENU LATERAL*/
+
 document.addEventListener('DOMContentLoaded', () => {
   const offcanvas = document.getElementById('menuLateral');
   const btnScrollTop = document.querySelector('.btn-scroll-top');
@@ -40,5 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+  
+/*ANIMACION SECCION SOBRE NOSOTROS, SERVICIOS, CATALOGO Y CONTACTO*/
+document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+      threshold: 0.2, // mejor en móvil para elementos más altos
+    };
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active"); //Esto permite repetir la animación
+        }
+      });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right, .paso-animado, .fade-slide-up, .card-animada, .slide-up");
+    animatedElements.forEach(el => observer.observe(el));
+  });
 
