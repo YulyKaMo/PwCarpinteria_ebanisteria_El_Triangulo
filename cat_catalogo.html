@@ -259,37 +259,64 @@
 
               <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/comedor_clasico.jpg" class="card-img-top" alt="Comedor"
-                  data-bs-toggle="modal" data-bs-target="#comedorModal">
+                  <div class="image-wrapper">  <!-- Contenedor solo para imagen + overlay -->
+                    <img src="media/imagenes/galeria/categorias_galeria/comedor_clasico.jpg" class="card-img-top" alt="Comedor">
+                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#comedorModal" style="cursor: pointer;">
+                      <i class="fas fa-search"></i>
+                    </div>
+                  </div>
                   <div class="card-body">
                     <h5 class="card-title">Comedor</h5>
                     <div class="linea-division"></div>
-                    <p class="card-subtext">Muebles acogedores que reúnen familia y amigos para compartir momentos inolvidables.</p>
+                      <p class="card-subtext">Muebles acogedores que reúnen familia y amigos para compartir momentos inolvidables.</p>
                     <div class="text-end">
-                      <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
-                    </div>
+                    <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                   </div>
                 </div>
               </div>
-              <div class="modal fade" id="comedorModal" tabindex="-1" aria-hidden="true">
-             <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="comedorModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-white">
+                  <div class="modal-header border-0">
+                    <span id="imageCounter">1 / 6</span>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body d-flex flex-column align-items-center">
+                    <!-- Imagen principal -->
+                    <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                      <img id="mainImage" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Imagen principal" class="img-fluid rounded" style="max-height: 80vh; object-fit: contain;">
+
+                      <!-- Flechas -->
+                      <button id="prevBtn" class="btn btn-link text-white position-absolute top-50 start-0 translate-middle-y fs-5">
+                        <i class="fas fa-arrow-left"></i>
+                      </button>
+                      <button id="nextBtn" class="btn btn-link text-white position-absolute top-50 end-0 translate-middle-y fs-5">
+                        <i class="fas fa-arrow-right"></i>
+                      </button>
                     </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg" alt="Comedor 2">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg" alt="Comedor 3">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg" alt="Comedor 5">
-                            <img src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 6">
-                        </div>
+
+                    <!-- Contador y descripción -->
+                    <div class="mt-3 text-center">
+                      <span id="imageDescription">Comedores - Ebanisteria y Carpinteria el Triangulo</span>
                     </div>
-                </div>
+
+                    <!-- Thumbnails -->
+                    <div class="d-flex justify-content-center mt-3 gap-2 flex-wrap" style="max-width: 80vw; overflow-x: auto;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1" data-index="0" style="height: 60px; cursor: pointer;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg" alt="Comedor 2" data-index="1" style="height: 60px; cursor: pointer;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg" alt="Comedor 3" data-index="2" style="height: 60px; cursor: pointer;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4" data-index="3" style="height: 60px; cursor: pointer;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg" alt="Comedor 5" data-index="4" style="height: 60px; cursor: pointer;">
+                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 6" data-index="5" style="height: 60px; cursor: pointer;">
+                    </div>
+                  </div>
+               </div>
               </div>
             </div>
+
 
               <div class="col-md-4">
                 <div class="card m-2">
