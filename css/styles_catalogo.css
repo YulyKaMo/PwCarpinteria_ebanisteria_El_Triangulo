@@ -225,74 +225,73 @@
 
 /*MODAL*/
 
-.modal-content {
-  background-color: #000; /* fondo oscuro para el modal */
-  color: white;
+.modal-content{
+  background-color: #000;
 }
 
-.modal-header{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* ocupar toda la altura del modal */
-}
-
-#mainImage {
+.modal-body img {
   max-height: 80vh;
-  max-width: 90vw;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 #prevBtn, #nextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
-  font-size: 2rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
   z-index: 10;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.overlay i {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .thumbnail {
-  height: 60px;
-  cursor: pointer;
-  margin: 0 2px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;     
+  border-radius: 5px;   
   border: 1px solid transparent;
-  border-radius: 3px;
-  transition: border-color 0.3s ease;
+  transition: border 0.2s ease;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-.thumbnail.border {
-  border-color: var(--color-hover);
-}
-
-.thumbnail.opacity-50 {
-  opacity: 0.5;
-}
-
-.thumbnails-container {
-  max-width: 80vw;
-  overflow-x: auto;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 1rem;
-  flex-wrap: nowrap;
-}
-
-.image-info {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 1rem;
+.thumbnail.active {
+  border: 1px solid var(--color-hover);
 }
 
 /*POLITICA DE PRIVACIDAD*/

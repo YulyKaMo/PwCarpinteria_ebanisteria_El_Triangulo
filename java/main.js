@@ -66,54 +66,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /*GALERIA DE IMAGENES DENTRO DEL MODAL DEL CATALOGO*/
 
-  const images = [
-    { src: "media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg", description: "Baños - Carpintería Joyla" },
-    { src: "media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg", description: "Baños - Carpintería Joyla" },
-    { src: "media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg", description: "Baños - Carpintería Joyla" },
-    { src: "media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg", description: "Baños - Carpintería Joyla" },
-    { src: "media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg", description: "Baños - Carpintería Joyla" },
-    { src: "media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg", description: "Baños - Carpintería Joyla" },
-  ];
+document.addEventListener("DOMContentLoaded", function () {
+    const thumbnails = document.querySelectorAll("#comedorModal .thumbnail");
+    const mainImage = document.getElementById("mainImage");
+    const imageCounter = document.getElementById("imageCounter");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-  let currentIndex = 0;
+    const totalImages = thumbnails.length;
+    let currentIndex = 0;
 
-  const mainImage = document.getElementById("mainImage");
-  const imageCounter = document.getElementById("imageCounter");
-  const imageDescription = document.getElementById("imageDescription");
-  const thumbnails = document.querySelectorAll(".thumbnail");
+    // Función para actualizar la imagen principal
+    function updateMainImage(index) {
+      const selectedThumbnail = thumbnails[index];
+      mainImage.src = selectedThumbnail.src;
+      mainImage.alt = selectedThumbnail.alt;
+      imageCounter.textContent = `${index + 1} / ${totalImages}`;
 
-  function updateGallery(index) {
-    currentIndex = index;
-    mainImage.src = images[index].src;
-    imageCounter.textContent = `${index + 1} / ${images.length}`;
-    imageDescription.textContent = images[index].description;
+      // Remover clase activa y agregar a la actual
+      thumbnails.forEach(thumb => thumb.classList.remove("active"));
+      selectedThumbnail.classList.add("active");
 
-    thumbnails.forEach((thumb, i) => {
-      thumb.classList.toggle("border-primary", i === index);
-      thumb.classList.toggle("opacity-50", i !== index);
+      currentIndex = index;
+    }
+
+    // Clic en miniaturas
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        updateMainImage(index);
+      });
     });
-  }
 
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    let newIndex = currentIndex - 1;
-    if (newIndex < 0) newIndex = images.length - 1;
-    updateGallery(newIndex);
-  });
-
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    let newIndex = currentIndex + 1;
-    if (newIndex >= images.length) newIndex = 0;
-    updateGallery(newIndex);
-  });
-
-  thumbnails.forEach(thumb => {
-    thumb.addEventListener("click", () => {
-      updateGallery(parseInt(thumb.dataset.index));
+    // Botón "siguiente"
+    nextBtn.addEventListener("click", () => {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= totalImages) newIndex = 0;
+      updateMainImage(newIndex);
     });
-  });
 
-  // Inicializar galería al abrir el modal
-  const comedorModal = document.getElementById('comedorModal');
-  comedorModal.addEventListener('show.bs.modal', () => {
-    updateGallery(0);
+    // Botón "anterior"
+    prevBtn.addEventListener("click", () => {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalImages - 1;
+      updateMainImage(newIndex);
+    });
+
+    // Reiniciar al abrir el modal
+    const modal = document.getElementById("comedorModal");
+    modal.addEventListener("shown.bs.modal", () => {
+      updateMainImage(0);
+    });
   });
