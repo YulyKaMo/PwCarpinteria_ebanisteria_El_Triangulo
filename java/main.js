@@ -63,57 +63,94 @@ document.addEventListener("DOMContentLoaded", function () {
     animatedElements.forEach(el => observer.observe(el));
   });
 
+  /*DESAPARECER BOTON DE TOP INICIO EN EL MODAL*/
+  document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopBtn = document.getElementById("btn-scroll-top");
+  const modal = document.getElementById("comedorModal");
+
+  if (modal && scrollTopBtn) {
+    // Cuando el modal se abre, oculta el botón
+    modal.addEventListener("shown.bs.modal", function () {
+      scrollTopBtn.style.display = "none";
+    });
+
+    // Cuando el modal se cierra, vuelve a mostrar el botón
+    modal.addEventListener("hidden.bs.modal", function () {
+      scrollTopBtn.style.display = "block"; // o 'flex' si lo usas así
+    });
+  }
+});
 
   /*GALERIA DE IMAGENES DENTRO DEL MODAL DEL CATALOGO*/
-
-document.addEventListener("DOMContentLoaded", function () {
-    const thumbnails = document.querySelectorAll("#comedorModal .thumbnail");
-    const mainImage = document.getElementById("mainImage");
-    const imageCounter = document.getElementById("imageCounter");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    const totalImages = thumbnails.length;
-    let currentIndex = 0;
-
-    // Función para actualizar la imagen principal
-    function updateMainImage(index) {
-      const selectedThumbnail = thumbnails[index];
-      mainImage.src = selectedThumbnail.src;
-      mainImage.alt = selectedThumbnail.alt;
-      imageCounter.textContent = `${index + 1} / ${totalImages}`;
-
-      // Remover clase activa y agregar a la actual
-      thumbnails.forEach(thumb => thumb.classList.remove("active"));
-      selectedThumbnail.classList.add("active");
-
-      currentIndex = index;
-    }
-
-    // Clic en miniaturas
-    thumbnails.forEach((thumb, index) => {
-      thumb.addEventListener("click", () => {
-        updateMainImage(index);
-      });
-    });
-
-    // Botón "siguiente"
-    nextBtn.addEventListener("click", () => {
-      let newIndex = currentIndex + 1;
-      if (newIndex >= totalImages) newIndex = 0;
-      updateMainImage(newIndex);
-    });
-
-    // Botón "anterior"
-    prevBtn.addEventListener("click", () => {
-      let newIndex = currentIndex - 1;
-      if (newIndex < 0) newIndex = totalImages - 1;
-      updateMainImage(newIndex);
-    });
-
-    // Reiniciar al abrir el modal
+  document.addEventListener("DOMContentLoaded", function () {
+    // Espera a que se abra el modal para cargar los elementos correctamente
     const modal = document.getElementById("comedorModal");
-    modal.addEventListener("shown.bs.modal", () => {
+
+    modal.addEventListener("shown.bs.modal", function () {
+      const thumbnails = modal.querySelectorAll(".thumbnail");
+      const mainImage = document.getElementById("mainImage");
+      const imageCounter = document.getElementById("imageCounter");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex = 0;
+      const totalImages = thumbnails.length;
+
+      function updateMainImage(index) {
+        const selectedThumbnail = thumbnails[index];
+        mainImage.src = selectedThumbnail.src;
+        mainImage.alt = selectedThumbnail.alt;
+        imageCounter.textContent = `${index + 1} / ${totalImages}`;
+
+        thumbnails.forEach(thumb => thumb.classList.remove("active"));
+        selectedThumbnail.classList.add("active");
+
+        currentIndex = index;
+      }
+
+      // Click en miniaturas
+      thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => {
+          updateMainImage(index);
+        });
+      });
+
+      // Botón siguiente
+      nextBtn.addEventListener("click", () => {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= totalImages) newIndex = 0;
+        updateMainImage(newIndex);
+      });
+
+      // Botón anterior
+      prevBtn.addEventListener("click", () => {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) newIndex = totalImages - 1;
+        updateMainImage(newIndex);
+      });
+
+      // Mostrar la primera imagen al abrir el modal
       updateMainImage(0);
     });
   });
+
+//Scroll tactil
+
+slider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].pageX;
+  scrollLeft = slider.scrollLeft;
+  lastStep = 0;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+
+  const deltaX = e.touches[0].pageX - startX;
+  const stepsMoved = Math.floor(deltaX / stepSize);
+
+  if (stepsMoved !== lastStep) {
+    const stepDiff = stepsMoved - lastStep;
+    slider.scrollLeft = scrollLeft - stepDiff * stepSize;
+    lastStep = stepsMoved;
+  }
+});

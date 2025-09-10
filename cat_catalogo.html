@@ -73,7 +73,7 @@
       <!-- Texto -->
       <div class="col-md-6 text-center text-md-start py-5">
         <h1 class="display-4 fw-bold mb-3 hero-title-catalogo">Descubre el catálogo de muebles que transformarán tu hogar</h1>
-        <p class="lead mb-4 text-secondary hero-paragraphhero-catalogo">Diseños exclusivos, calidad y funcionalidad para cada espacio. ¡Haz de tu casa un verdadero hogar!</p>
+        <!--<p class="lead mb-4 text-secondary hero-paragraphhero-catalogo">Diseños exclusivos, calidad y funcionalidad para cada espacio. ¡Haz de tu casa un verdadero hogar!</p-->
       </div>
       <!-- Imagen -->
       <div class="col-md-6">
@@ -278,45 +278,48 @@
             <!-- Modal -->
             <div class="modal fade" id="comedorModal" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content text-white">
+                <div class="modal-content text-white bg-dark">
                   <div class="modal-header border-0">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                   </div>
-                  <div class="modal-body d-flex flex-column align-items-center">
-                    <!-- Imagen principal -->
-                    <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
-                      <img id="mainImage" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Imagen principal" class="img-fluid">
+                <div class="modal-body d-flex flex-column align-items-center">
+                  <!-- Imagen principal con botones -->
+                  <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                    <img id="mainImage" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
 
-                      <!-- Flechas -->
-                      <button id="prevBtn" class="btn btn-link text-white top-50 start-0 translate-middle-y">
-                        <i class="fas fa-arrow-left"></i>
-                      </button>
-                      <button id="nextBtn" class="btn btn-link text-white top-50 end-0 translate-middle-y">
-                        <i class="fas fa-arrow-right"></i>
-                      </button>
-                    </div>
+                    <!-- Flechas -->
+                    <button id="prevBtn" class="btn btn-link start-0 translate-middle-y">
+                      <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="nextBtn" class="btn btn-link end-0 translate-middle-y">
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
 
-                    <!-- Contador y descripción -->
-                    <div class="mt-3 text-center">
-                      <span id="imageCounter">1 / 6</span> - <span id="imageDescription">Comedores - Ebanisteria y Carpinteria el Triangulo</span>
-                    </div>
+                  <!-- Contador y descripción -->
+                  <div class="mt-3 text-center">
+                    <span id="imageCounter">1 / 6</span> 
+                    <span id="imageDescription">Comedores - Ebanisteria y Carpinteria el Triangulo</span>
+                  </div>
 
-                    <!-- Thumbnails -->
-                    <div class="d-flex justify-content-center mt-3 gap-2 flex-wrap" style="max-width: 80vw; overflow-x: auto;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1" data-index="0" style="height: 60px; cursor: pointer;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg" alt="Comedor 2" data-index="1" style="height: 60px; cursor: pointer;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg" alt="Comedor 3" data-index="2" style="height: 60px; cursor: pointer;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4" data-index="3" style="height: 60px; cursor: pointer;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg" alt="Comedor 5" data-index="4" style="height: 60px; cursor: pointer;">
-                      <img class="thumbnail img-thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 6" data-index="5" style="height: 60px; cursor: pointer;">
+                  <!-- Thumbnails -->
+                  <div class="thumbnail-bar mt-2">
+                    <div class="thumbnail-container d-flex gap-2">
+                      <img class="thumbnail active thumbnail-img" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg" alt="Comedor 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg" alt="Comedor 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg" alt="Comedor 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor6.jpg" alt="Comedor 6" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 7" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                     </div>
                   </div>
-               </div>
+                </div>
               </div>
             </div>
+            </div>
 
-
-              <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="card m-2">
                   <img src="media/imagenes/galeria/categorias_galeria/dormitorio_sencillo.jpg" class="card-img-top" alt="Dormitorios"
                   data-bs-toggle="modal" data-bs-target="#dormitorioModal">
