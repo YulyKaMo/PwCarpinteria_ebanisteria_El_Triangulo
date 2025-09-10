@@ -63,35 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
     animatedElements.forEach(el => observer.observe(el));
   });
 
-  /*DESAPARECER BOTON DE TOP INICIO EN EL MODAL*/
-  document.addEventListener("DOMContentLoaded", function () {
-  const scrollTopBtn = document.getElementById("btn-scroll-top");
-  const modal = document.getElementById("comedorModal");
 
-  if (modal && scrollTopBtn) {
-    // Cuando el modal se abre, oculta el botón
-    modal.addEventListener("shown.bs.modal", function () {
-      scrollTopBtn.style.display = "none";
-    });
-
-    // Cuando el modal se cierra, vuelve a mostrar el botón
-    modal.addEventListener("hidden.bs.modal", function () {
-      scrollTopBtn.style.display = "block"; // o 'flex' si lo usas así
-    });
-  }
-});
-
-  /*GALERIA DE IMAGENES DENTRO DEL MODAL DEL CATALOGO*/
-  document.addEventListener("DOMContentLoaded", function () {
-    // Espera a que se abra el modal para cargar los elementos correctamente
-    const modal = document.getElementById("comedorModal");
+/*GALERIA DE IMAGENES DENTRO DEL MODAL DEL CATALOGO*/
+  
+document.addEventListener("DOMContentLoaded", function () {
+  function setupCarousel(modalId, mainImageId, counterId, prevBtnId, nextBtnId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
 
     modal.addEventListener("shown.bs.modal", function () {
       const thumbnails = modal.querySelectorAll(".thumbnail");
-      const mainImage = document.getElementById("mainImage");
-      const imageCounter = document.getElementById("imageCounter");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
+      const mainImage = document.getElementById(mainImageId);
+      const imageCounter = document.getElementById(counterId);
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+
+      if (!mainImage || !imageCounter || !prevBtn || !nextBtn) return;
 
       let currentIndex = 0;
       const totalImages = thumbnails.length;
@@ -108,31 +95,30 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = index;
       }
 
-      // Click en miniaturas
       thumbnails.forEach((thumb, index) => {
-        thumb.addEventListener("click", () => {
-          updateMainImage(index);
-        });
+        thumb.addEventListener("click", () => updateMainImage(index));
       });
 
-      // Botón siguiente
       nextBtn.addEventListener("click", () => {
         let newIndex = currentIndex + 1;
         if (newIndex >= totalImages) newIndex = 0;
         updateMainImage(newIndex);
       });
 
-      // Botón anterior
       prevBtn.addEventListener("click", () => {
         let newIndex = currentIndex - 1;
         if (newIndex < 0) newIndex = totalImages - 1;
         updateMainImage(newIndex);
       });
 
-      // Mostrar la primera imagen al abrir el modal
       updateMainImage(0);
     });
-  });
+  }
+
+  // Llama a la función para cada modal con sus respectivos IDs
+  setupCarousel("comedorModal", "mainImage", "imageCounter", "prevBtn", "nextBtn");
+  setupCarousel("dormitorioModal", "dormMainImage", "dormImageCounter", "dormprevBtn", "dormnextBtn");
+});
 
 //Scroll tactil
 

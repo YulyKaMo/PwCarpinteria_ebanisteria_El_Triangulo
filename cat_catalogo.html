@@ -311,7 +311,7 @@
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor5.jpg" alt="Comedor 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor6.jpg" alt="Comedor 6" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
-                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 7" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/sillas1.jpg" alt="Comedor 7" data-index="6" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                     </div>
                   </div>
                 </div>
@@ -320,39 +320,68 @@
             </div>
 
             <div class="col-md-4">
-                <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/dormitorio_sencillo.jpg" class="card-img-top" alt="Dormitorios"
-                  data-bs-toggle="modal" data-bs-target="#dormitorioModal">
-                  <div class="card-body">
-                    <h5 class="card-title">Dormitorios</h5>
-                    <div class="linea-division"></div>
+              <div class="card m-2">
+                <div class="image-wrapper">  <!-- Contenedor solo para imagen + overlay -->
+                  <img src="media/imagenes/galeria/categorias_galeria/dormitorio_sencillo.jpg" class="card-img-top" alt="Dormitorios" data-bs-toggle="modal" data-bs-target="#dormitorioModal">
+                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#dormitorioModal" style="cursor: pointer;">
+                      <i class="fas fa-search"></i>
+                    </div>
+                  </div>
+                <div class="card-body">
+                  <h5 class="card-title">Dormitorios</h5>
+                  <div class="linea-division"></div>
                     <p class="card-subtext">Muebles de descanso hechos a medida para mayor confort y calidez para descansar.</p>
                     <div class="text-end">
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
                   </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="modal fade" id="dormitorioModal" tabindex="-1" aria-hidden="true">
-              <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio1.jpg" alt="Dormitorio 1">
-                            <img src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio2.jpg" alt="Dormitorio 2">
-                            <img src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio3.jpg" alt="Dormitorio 3">
-                            <img src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio4.jpg" alt="Dormitorio 4">
+                <!-- Modal Dormitorio -->
+                <div class="modal fade" id="dormitorioModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+
+                        <!-- Imagen principal -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="dormMainImage" src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio1.jpg" alt="Dormitorio principal"
+                          class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="dormprevBtn" class="btn btn-link position-absolute start-0 top-50 translate-middle-y">
+                            <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="dormnextBtn" class="btn btn-link position-absolute end-0 top-50 translate-middle-y">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
                         </div>
-                    </div>
-                </div>
-              </div>
-              </div>
 
-              <div class="col-md-4">
+                        <!-- Contador -->
+                        <div class="mt-3 text-center">
+                          <span id="dormImageCounter">1 / 4</span>
+                          <span>- Dormitorios - Ebanistería y Carpintería el Triángulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active" src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio1.jpg" alt="Dormitorio 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio2.jpg" alt="Dormitorio 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio3.jpg" alt="Dormitorio 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_dormitorios_madera/dormitorio4.jpg" alt="Dormitorio 4" data-index="3"style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
                 <div class="card m-2">
                   <img src="media/imagenes/galeria/categorias_galeria/escaleras_madera.jpg" class="card-img-top" alt="Escaleras"
                   data-bs-toggle="modal" data-bs-target="#escalerasModal">

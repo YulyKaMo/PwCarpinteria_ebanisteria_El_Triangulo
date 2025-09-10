@@ -234,8 +234,8 @@
   object-fit: contain;
 }
 
-#prevBtn,
-#nextBtn {
+#prevBtn,#dormprevBtn,
+#nextBtn,#dormnextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -247,15 +247,15 @@
   transition: color 0.3s; 
 }
 
-#prevBtn:hover,
-#nextBtn:hover {
+#prevBtn:hover,#dormprevBtn:hover,
+#nextBtn:hover, #dormnextBtn:hover {
   color: var(--color-primary);            
 }
 
 @media (max-width: 768px) {  /*rectangulo detras de flechas next y prev*/
 
-  #prevBtn::before,
-  #nextBtn::before {
+  #prevBtn::before,#dormprevBtn::before,
+  #nextBtn::before,#dormnextBtn::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -267,13 +267,13 @@
     z-index: -1;     
   }
 
-  #prevBtn:hover::before,
-  #nextBtn:hover::before {
+  #prevBtn:hover::before,#dormprevBtn:hover::before,
+  #nextBtn:hover::before,#dormnextBtn:hover::before  {
     background-color: rgba(255, 255, 255, 0.4);
   }
 
-  #prevBtn:hover,
-  #nextBtn:hover  {
+  #prevBtn:hover,#dormprevBtn:hover,
+  #nextBtn:hover,#dormnextBtn:hover  {
     color: var(--color-primary);
   }
 }
