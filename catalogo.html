@@ -41,92 +41,90 @@
     <!-- HERO -->
     <header class="hero-section pb-5 position-relative" id="inicio">
 
-  <!-- NAVEGACIÓN -->
-  <nav class="navbar navbar-expand-lg slide-down navbar-overlay" aria-label="Menú principal">
-    <div class="container-fluid d-flex align-items-center justify-content-between px-3">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Página principal">
-        <img src="media/imagenes/logo/logo_el_triangulo.png" alt="Logo de la empresa" style="width: 150px;" class="rounded-pill">
-      </a>
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg slide-down navbar-overlay" aria-label="Menú principal">
+      <div class="container-fluid d-flex align-items-center justify-content-between px-3">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Página principal">
+          <img src="media/imagenes/logo/logo_el_triangulo.png" alt="Logo de la empresa" style="width: 150px;" class="rounded-pill">
+        </a>
 
-      <!-- Botón hamburguesa -->
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
-        <i class="fas fa-bars fa-2x" style="color: #B47927;"></i>
-      </button>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
+          <i class="fas fa-bars fa-2x" style="color: #B47927;"></i>
+        </button>
 
-      <!-- Menú colapsado para pantallas grandes -->
-      <div class="collapse navbar-collapse d-none d-lg-block">
-        <ul class="navbar-nav ms-auto px-5">
-          <li class="nav-item mx-2"><a href="index.html" class="nav-link">INICIO</a></li>
-          <li class="nav-item mx-2"><a href="index.html#sobre_nosotros" class="nav-link">SOBRE NOSOTROS</a></li>
-          <li class="nav-item mx-2"><a href="index.html#servicios" class="nav-link">SERVICIOS</a></li>
-          <li class="nav-item mx-2"><a href="cat_catalogo.html#catalogo_muebles" class="nav-link active">CATÁLOGO</a></li>
-          <li class="nav-item mx-2 pe-4"><a href="index.html#contacto" class="nav-link">CONTACTO</a></li>
+        <!-- Menú colapsado para pantallas grandes -->
+        <div class="collapse navbar-collapse d-none d-lg-block">
+          <ul class="navbar-nav ms-auto px-5">
+            <li class="nav-item mx-2"><a href="index.html" class="nav-link">INICIO</a></li>
+            <li class="nav-item mx-2"><a href="index.html#sobre_nosotros" class="nav-link">SOBRE NOSOTROS</a></li>
+            <li class="nav-item mx-2"><a href="index.html#servicios" class="nav-link">SERVICIOS</a></li>
+            <li class="nav-item mx-2"><a href="cat_catalogo.html#catalogo_muebles" class="nav-link active">CATÁLOGO</a></li>
+            <li class="nav-item mx-2 pe-4"><a href="index.html#contacto" class="nav-link">CONTACTO</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="container slide-in-right">
+      <div class="row align-items-center hero-catalogo">
+        <!-- Texto -->
+        <div class="col-md-6 text-center text-md-start py-5">
+          <h1 class="display-4 fw-bold mb-3 hero-title-catalogo">Descubre el catálogo de muebles que transformarán tu hogar</h1>
+          <!--<p class="lead mb-4 text-secondary hero-paragraphhero-catalogo">Diseños exclusivos, calidad y funcionalidad para cada espacio. ¡Haz de tu casa un verdadero hogar!</p-->
+        </div>
+        <!-- Imagen -->
+        <div class="col-md-6">
+          <div class="img-wrapper">
+            <img src="media/imagenes/header_catalogo/cuchilla-sierra-circular-trabajo-madera-taller-carpinteria_img_hero.png"
+              alt="Catálogo de Muebles"
+              class="img-fluid img-difuminada shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </header>
+      <!-- OFFCANVAS: menú lateral para móviles -->
+      <div class="offcanvas offcanvas-end w-60 bg-azulOscuro" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title titulo-menulateral" id="menuLateralLabel">CARPINTERIA Y EBANISTERIA EL TRIANGULO</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav nav-movil">
+          <li class="nav-item"><a href="index.html" class="nav-link text-white">INICIO</a></li>
+          <li class="nav-item"><a href="#sobre_nosotros" class="nav-link text-white">SOBRE NOSOTROS</a></li>
+          <li class="nav-item"><a href="#servicios" class="nav-link text-white">SERVICIOS</a></li>
+          <li class="nav-item"><a href="cat_catalogo.html#catalogo_muebles" class="nav-link text-white">CATÁLOGO</a></li>
+          <li class="nav-item"><a href="#contacto" class="nav-link text-white">CONTACTO</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <div class="container slide-in-right">
-    <div class="row align-items-center hero-catalogo">
-      <!-- Texto -->
-      <div class="col-md-6 text-center text-md-start py-5">
-        <h1 class="display-4 fw-bold mb-3 hero-title-catalogo">Descubre el catálogo de muebles que transformarán tu hogar</h1>
-        <!--<p class="lead mb-4 text-secondary hero-paragraphhero-catalogo">Diseños exclusivos, calidad y funcionalidad para cada espacio. ¡Haz de tu casa un verdadero hogar!</p-->
-      </div>
-      <!-- Imagen -->
-      <div class="col-md-6">
-        <div class="img-wrapper">
-          <img src="media/imagenes/header_catalogo/cuchilla-sierra-circular-trabajo-madera-taller-carpinteria_img_hero.png"
-               alt="Catálogo de Muebles"
-               class="img-fluid img-difuminada shadow-lg">
+        <div class="d-flex justify-content-center pt-4">
+          <ul class="list-inline mt-3">
+            <li class="social-icons list-inline-item">
+              <a href="https://wa.me/573213952376" target="_blank" class="text-white" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+            </li>
+            <li class="social-icons list-inline-item">
+              <a href="mailto:carpinteria.triangulo@gmail.com" target="_blank" class="text-white" aria-label="Correo electrónico">
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
+            </li>
+            <li class="social-icons list-inline-item">
+              <a href="https://maps.app.goo.gl/y2fanEojGGDWTmCy6" target="_blank" class="text-white" aria-label="Ubicación">
+                <i class="fas fa-map-marker-alt fa-lg"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-
-</header>
-<!-- OFFCANVAS: menú lateral para móviles -->
-  <div class="offcanvas offcanvas-end w-50 bg-azulOscuro" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title titulo-menulateral" id="menuLateralLabel">CARPINTERIA Y EBANISTERIA EL TRIANGULO</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav nav-movil">
-        <li class="nav-item"><a href="index.html" class="nav-link text-white">INICIO</a></li>
-        <li class="nav-item"><a href="#sobre_nosotros" class="nav-link text-white">SOBRE NOSOTROS</a></li>
-        <li class="nav-item"><a href="#servicios" class="nav-link text-white">SERVICIOS</a></li>
-        <li class="nav-item"><a href="cat_catalogo.html#catalogo_muebles" class="nav-link text-white">CATÁLOGO</a></li>
-        <li class="nav-item"><a href="#contacto" class="nav-link text-white">CONTACTO</a></li>
-      </ul>
-      <div class="d-flex justify-content-center pt-4">
-        <ul class="list-inline mt-3">
-          <li class="social-icons list-inline-item">
-            <a href="https://wa.me/573213952376" target="_blank" class="text-white" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp fa-lg"></i>
-            </a>
-          </li>
-          <li class="social-icons list-inline-item">
-            <a href="mailto:carpinteria.triangulo@gmail.com" target="_blank" class="text-white" aria-label="Correo electrónico">
-              <i class="fas fa-envelope fa-lg"></i>
-            </a>
-          </li>
-          <li class="social-icons list-inline-item">
-            <a href="https://maps.app.goo.gl/y2fanEojGGDWTmCy6" target="_blank" class="text-white" aria-label="Ubicación">
-              <i class="fas fa-map-marker-alt fa-lg"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
     <main>
-
       <!-- SECCIÓN: CATALOGO -->
-
       <section class="catalogo_muebles p-5" id="catalogo_muebles">     
         <!-- Controles -->
        <div class="d-flex justify-content-end pe-2">
@@ -135,55 +133,88 @@
         </div>
 
         <div id="cardCarousel" class="carousel slide" data-bs-ride="false"> <!-- si quiero automatico: data-bs-ride="carousel" data-bs-interval="4000"-->
-        <div class="carousel-inner">
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="card m-2">
+                    <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/armario_empotrado.jpg" class="card-img-top" alt="Armarios y closets">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#armariosModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Armarios y Clósets</h5>
+                      <div class="linea-division"></div>
+                      <p class="card-subtext">Espacios organizados y elegantes para aprovechar al máximo cada rincón del hogar.</p>
+                      <div class="text-end">
+                        <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
+                      </div>
+                  </div>
+                </div>
 
-              <div class="col-md-4">
-                <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/armario_empotrado.jpg" class="card-img-top" alt="Armarios y closets" 
-                  data-bs-toggle="modal" data-bs-target="#armariosModal">
-                  <div class="card-body">
-                    <h5 class="card-title">Armarios y Clósets</h5>
-                    <div class="linea-division"></div>
-                    <p class="card-subtext">Espacios organizados y elegantes para aprovechar al máximo cada rincón del hogar.</p>
-                    <div class="text-end">
-                      <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
+                <div class="modal fade" id="armariosModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="armMainImage" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="armprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="armnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="armImageCounter">1 / 11</span> 
+                          <span>Armarios y closets - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Clóset de madera estilo clásico en color nogal, con puertas molduradas, cajones centrales y compartimientos superiores, equipado con manijas metálicas rectos."
+                              data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario2_clasico_color_caoba.jpg" alt="Armario clóset de madera estilo clásico en color caoba, con puertas de diseño en relieve, cajones centrales y espacio abierto para televisor." 
+                              data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario3_moderno_color_wengue.jpg" alt="Clóset de madera estilo moderno en color wengué oscuro, con puertas lisas y manijas metálicos plateados, combinado con cajones verticales."
+                              data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario4_esquinero_clásico_en_color_caoba_rojizo.jpg" alt="Clóset esquinero de madera estilo clásico en color caoba rojizo, con puertas altas molduradas, tres cajones inferiores y manijas metálicos plateados."
+                              data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario5.jpg" alt="Armario 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario6.jpg" alt="Armario 6" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario7.jpg" alt="Armario 7" data-index="6" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario8.jpg" alt="Armario 8" data-index="7" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario9.jpg" alt="Armario 9" data-index="8" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario10.jpg" alt="Armario 10" data-index="9" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario11.jpg" alt="Armario 11" data-index="10" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="modal fade" id="armariosModal" tabindex="-1" aria-hidden="true">
-              <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Clóset de madera estilo clásico en color nogal, con puertas molduradas, cajones centrales y compartimientos superiores, equipado con manijas metálicas rectos.">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario2_clasico_color_caoba.jpg" alt="Armario clóset de madera estilo clásico en color caoba, con puertas de diseño en relieve, cajones centrales y espacio abierto para televisor.">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario3_moderno_color_wengue.jpg" alt="Clóset de madera estilo moderno en color wengué oscuro, con puertas lisas y manijas metálicos plateados, combinado con cajones verticales.">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario4_esquinero_clásico_en_color_caoba_rojizo.jpg" alt="Clóset esquinero de madera estilo clásico en color caoba rojizo, con puertas altas molduradas, tres cajones inferiores y manijas metálicos plateados.">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario5.jpg" alt="Armario 5">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario6.jpg" alt="Armario 6">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario7.jpg" alt="Armario 7">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario8.jpg" alt="Armario 8">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario9.jpg" alt="Armario 9">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario10.jpg" alt="Armario 10">
-                            <img src="media/imagenes/galeria/gallery_armarios_closets_madera/armario11.jpg" alt="Armario 11">
-                        </div>
-                    </div>
-                </div>
-             </div>
-             </div>
-
-              <div class="col-md-4">
+                <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/biblioteca_madera.jpg" class="card-img-top" alt="Bibliotecas"
-                  data-bs-toggle="modal" data-bs-target="#bibliotecaModal">
+                    <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/biblioteca_madera.jpg" class="card-img-top" alt="Bibliotecas">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#bibliotecaModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                   <div class="card-body">
                     <h5 class="card-title">Bibliotecas</h5>
                     <div class="linea-division"></div>
@@ -191,29 +222,55 @@
                     <div class="text-end">
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
+                </div>
+                </div>
+
+                <div class="modal fade" id="bibliotecaModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="biblMainImage" src="media/imagenes/galeria/gallery_bibliotecas_madera/biblioteca1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="biblprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="biblnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="biblImageCounter">1 / 1</span> 
+                          <span>Bibliotecas y estantes - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_bibliotecas_madera/biblioteca1.jpg" alt="Biblioteca 1"data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="modal fade" id="bibliotecaModal" tabindex="-1" aria-hidden="true">
-              <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_bibliotecas_madera/biblioteca1.jpg" alt="Biblioteca 1">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-              <div class="col-md-4">
+                <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/cocina_integral_madera.jpg" class="card-img-top" alt="Cocinas"
-                  data-bs-toggle="modal" data-bs-target="#cocinaModal">
+                      <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/cocina_integral_madera.jpg" class="card-img-top" alt="Cocinas">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#cocinaModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                   <div class="card-body">
                     <h5 class="card-title">Cocinas integrales</h5>
                     <div class="linea-division"></div>
@@ -221,41 +278,64 @@
                     <div class="text-end">
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
-                  </div>
+                </div>
+                </div>
+                
+
+                <div class="modal fade" id="cocinaModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="cocMainImage" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="cocprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="cocnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="cocImageCounter">1 / 11</span> 
+                          <span>Cocinas integrales - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina1.jpg" alt="Cocina 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina2.jpg" alt="Cocina 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina3.jpg" alt="Cocina 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina4.jpg" alt="Cocina 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina5.jpg" alt="Cocina 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina6.jpg" alt="Cocina 6" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina7.jpg" alt="Cocina 7" data-index="6" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina8.jpg" alt="Cocina 8" data-index="7" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina9.jpg" alt="Cocina 9" data-index="8" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina10.jpg" alt="Cocina 10" data-index="9" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina11.jpg" alt="Cocina 11" data-index="10" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina12.jpg" alt="Cocina 12" data-index="11" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                      </div>
+                      </div>
+                   </div>
                 </div>
               </div>
+              </div>
+            </div>
             </div>
 
-            <div class="modal fade" id="cocinaModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina1.jpg" alt="Cocina 1">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina2.jpg" alt="Cocina 2">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina3.jpg" alt="Cocina 3">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina4.jpg" alt="Cocina 4">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina5.jpg" alt="Cocina 5">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina6.jpg" alt="Cocina 6">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina7.jpg" alt="Cocina 7">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina8.jpg" alt="Cocina 8">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina9.jpg" alt="Cocina 9">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina10.jpg" alt="Cocina 10">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina11.jpg" alt="Cocina 11">
-                            <img src="media/imagenes/galeria/gallery_cocinas_integrales_madera/cocina12.jpg" alt="Cocina 12">        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+             <div class="row justify-content-center">
               <div class="col-md-4">
                 <div class="card m-2">
                   <div class="image-wrapper">  <!-- Contenedor solo para imagen + overlay -->
@@ -269,15 +349,13 @@
                     <div class="linea-division"></div>
                       <p class="card-subtext">Muebles acogedores que reúnen familia y amigos para compartir momentos inolvidables.</p>
                     <div class="text-end">
-                    <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
-                  </div>
+                      <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
+                    </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="comedorModal" tabindex="-1" aria-hidden="true">
-              <div class="modal-dialog modal-fullscreen">
+              <div class="modal fade" id="comedorModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content text-white bg-dark">
                   <div class="modal-header border-0">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -285,27 +363,27 @@
                 <div class="modal-body d-flex flex-column align-items-center">
                   <!-- Imagen principal con botones -->
                   <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
-                    <img id="mainImage" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+                    <img id="comMainImage" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
 
                     <!-- Flechas -->
-                    <button id="prevBtn" class="btn btn-link start-0 translate-middle-y">
+                    <button id="comprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
                       <i class="fas fa-arrow-left"></i>
                     </button>
-                    <button id="nextBtn" class="btn btn-link end-0 translate-middle-y">
+                    <button id="comnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
                       <i class="fas fa-arrow-right"></i>
                     </button>
                   </div>
 
                   <!-- Contador y descripción -->
                   <div class="mt-3 text-center">
-                    <span id="imageCounter">1 / 6</span> 
-                    <span id="imageDescription">Comedores - Ebanisteria y Carpinteria el Triangulo</span>
+                    <span id="comImageCounter">1 / 6</span> 
+                    <span>Comedores - Ebanisteria y Carpinteria el Triangulo</span>
                   </div>
 
                   <!-- Thumbnails -->
                   <div class="thumbnail-bar mt-2">
                     <div class="thumbnail-container d-flex gap-2">
-                      <img class="thumbnail active thumbnail-img" src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                      <img class="thumbnail active " src="media/imagenes/galeria/gallery_comedores_madera/comedor1.jpg" alt="Comedor 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor2.jpg" alt="Comedor 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor3.jpg" alt="Comedor 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                       <img class="thumbnail" src="media/imagenes/galeria/gallery_comedores_madera/comedor4.jpg" alt="Comedor 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
@@ -315,11 +393,12 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-            </div>
-            </div>
+              </div>
+              </div>
 
-            <div class="col-md-4">
+             <div class="col-md-4">
               <div class="card m-2">
                 <div class="image-wrapper">  <!-- Contenedor solo para imagen + overlay -->
                   <img src="media/imagenes/galeria/categorias_galeria/dormitorio_sencillo.jpg" class="card-img-top" alt="Dormitorios" data-bs-toggle="modal" data-bs-target="#dormitorioModal">
@@ -335,10 +414,8 @@
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
                   </div>
-                  </div>
                 </div>
 
-                <!-- Modal Dormitorio -->
                 <div class="modal fade" id="dormitorioModal" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content text-white bg-dark">
@@ -353,10 +430,10 @@
                           class="img-fluid" style="max-height: 80vh; object-fit: contain;">
 
                           <!-- Flechas -->
-                          <button id="dormprevBtn" class="btn btn-link position-absolute start-0 top-50 translate-middle-y">
+                          <button id="dormprevBtn" class="btn btn-link position-absolute start-0 top-50 translate-middle-y prevBtn">
                             <i class="fas fa-arrow-left"></i>
                           </button>
-                          <button id="dormnextBtn" class="btn btn-link position-absolute end-0 top-50 translate-middle-y">
+                          <button id="dormnextBtn" class="btn btn-link position-absolute end-0 top-50 translate-middle-y nextBtn">
                             <i class="fas fa-arrow-right"></i>
                           </button>
                         </div>
@@ -377,55 +454,85 @@
                           </div>
                         </div>
                       </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-md-4">
                   <div class="card m-2">
-                    <img src="media/imagenes/galeria/categorias_galeria/escaleras_madera.jpg" class="card-img-top" alt="Escaleras"
-                    data-bs-toggle="modal" data-bs-target="#escalerasModal">
+                      <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/escaleras_madera.jpg" class="card-img-top" alt="Escaleras">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#escalerasModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                     <div class="card-body">
                       <h5 class="card-title">Escaleras</h5>
                       <div class="linea-division"></div>
                         <p class="card-subtext">Escaleras con estilo que optimizan espacios y realzan la estética de tu hogar.</p>
                       <div class="text-end">
                         <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
+                      </div> 
+                    </div>
+                  </div>
+
+                <div class="modal fade" id="escalerasModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                       </div>
-                    </div> 
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="escMainImage" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="escprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="escnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="escImageCounter">1 / 6</span> 
+                          <span>Escaleras - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_escaleras_madera/escaleras1.jpg" alt="Escaleras 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras2.jpg" alt="Escaleras 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras3.jpg" alt="Escaleras 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras4.jpg" alt="Escaleras 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras5.jpg" alt="Escaleras 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_escaleras_madera/escaleras6.jpg" alt="Escaleras 6"  data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                </div>
-
-            <div class="modal fade" id="escalerasModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras1.jpg" alt="Escaleras 1">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras2.jpg" alt="Escaleras 2">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras3.jpg" alt="Escaleras 3">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras4.jpg" alt="Escaleras 4">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras5.jpg" alt="Escaleras 5">
-                            <img src="media/imagenes/galeria/gallery_escaleras_madera/escaleras6.jpg" alt="Escaleras 6">
-                        </div>
-                    </div>
-                </div>
-              </div>
             </div>
-          </div>
-    
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-
+   
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
               <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/baños_modernos.jpg" class="card-img-top" alt="Muebles para baño"
-                  data-bs-toggle="modal" data-bs-target="#banosModal">
+                      <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/baños_modernos.jpg" class="card-img-top" alt="Muebles para baño">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#banosModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                   <div class="card-body">
                     <h5 class="card-title">Muebles para baño</h5>
                     <div class="linea-division"></div>
@@ -433,32 +540,55 @@
                     <div class="text-end">
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
-                  </div>
                 </div>
               </div>
 
              <div class="modal fade" id="banosModal" tabindex="-1" aria-hidden="true">
-             <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_muebles_baño_madera/bano1.jpg" alt="Baño 1">
-                            <img src="media/imagenes/galeria/gallery_muebles_baño_madera/bano2.jpg" alt="Baño 2">
-                            <img src="media/imagenes/galeria/gallery_muebles_baño_madera/bano3.jpg" alt="Baño 3">
-                            <img src="media/imagenes/galeria/gallery_muebles_baño_madera/bano4.jpg" alt="Baño 4">
-                        </div>
-                    </div>
-                </div>
-              </div>
-              </div>
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="banMainImage" src="media/imagenes/galeria/gallery_muebles_baño_madera/bano1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
 
-              <div class="col-md-4">
+                          <!-- Flechas -->
+                          <button id="banprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="bannextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="banImageCounter">1 / 4</span> 
+                          <span>Muebles para baño- Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_muebles_baño_madera/bano1.jpg" alt="Baño 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/espejos_muebles.jpg" class="card-img-top" alt="Muebles con espejos"
-                  data-bs-toggle="modal" data-bs-target="#espejoModal">
+                      <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/espejos_muebles.jpg" class="card-img-top" alt="Muebles con espejos">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#espejoModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                   <div class="card-body">
                     <h5 class="card-title">Muebles con espejos </h5>
                     <div class="linea-division"></div>
@@ -466,30 +596,55 @@
                     <div class="text-end">
                       <a href="#" class="text-decoration-none link-catalogo">Ver más <i class="fas fa-angles-right"></i></a>
                     </div>
-                  </div>
                 </div>
               </div>
 
               <div class="modal fade" id="espejoModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_muebles_espejos_madera/espejos_muebles1.jpg" alt="Espejo 1">
-                            <img src="media/imagenes/galeria/gallery_muebles_espejos_madera/espejos_muebles2.jpg" alt="Espejo 2">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="espMainImage" src="media/imagenes/galeria/gallery_muebles_espejos_madera/espejos_muebles1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 80vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="espprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="espnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
                         </div>
+
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="espImageCounter">1 / 2</span> 
+                          <span>Muebles con espejos - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active " src="media/imagenes/galeria/gallery_muebles_espejos_madera/espejos_muebles1.jpg" alt="Espejo 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
               <div class="col-md-4">
                 <div class="card m-2">
-                  <img src="media/imagenes/galeria/categorias_galeria/puertas_y_ventanas.jpg" class="card-img-top" alt="Puertas y ventanas"
-                  data-bs-toggle="modal" data-bs-target="#puertas_ventanasModal">
+                      <div class="image-wrapper">
+                      <img src="media/imagenes/galeria/categorias_galeria/puertas_y_ventanas.jpg" class="card-img-top" alt="Puertas y ventanas">
+                      <div class="overlay" data-bs-toggle="modal" data-bs-target="#puertas_ventanasModal" style="cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
                   <div class="card-body">
                     <h5 class="card-title">Puertas y ventanas</h5>
                     <div class="linea-division"></div>
@@ -500,42 +655,64 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        </div>
+              </div>
+              </div>
+              </div>
+              </div>
 
-        <div class="modal fade" id="puertas_ventanasModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="gallery-flex">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas1.jpg" alt="Puertas_ventanas 1">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas2.jpg" alt="Puertas_ventanas 2">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas3.jpg" alt="Puertas_ventanas 3">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas4.jpg" alt="Puertas_ventanas 4">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas5.jpg" alt="Puertas_ventanas 5">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas6.jpg" alt="Puertas_ventanas 6">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas7.jpg" alt="Puertas_ventanas 7">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas8.jpg" alt="Puertas_ventanas 8">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas9.jpg" alt="Puertas_ventanas 9">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas10.jpg" alt="Puertas_ventanas 10">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas11.jpg" alt="Puertas_ventanas 11">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas12.jpg" alt="Puertas_ventanas 12">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas13.jpg" alt="Puertas_ventanas 13">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas14.jpg" alt="Puertas_ventanas 14">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas15.jpg" alt="Puertas_ventanas 15">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas16.jpg" alt="Puertas_ventanas 16">
-                            <img src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas17.jpg" alt="Puertas_ventanas 17">
+              <div class="modal fade" id="puertas_ventanasModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content text-white bg-dark">
+                      <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body d-flex flex-column align-items-center">
+                        <!-- Imagen principal con botones -->
+                        <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 80vh;">
+                          <img id="puertMainImage" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas1.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
+
+                          <!-- Flechas -->
+                          <button id="puertprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn">
+                           <i class="fas fa-arrow-left"></i>
+                          </button>
+                          <button id="puertnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+                        <!-- Contador y descripción -->
+                        <div class="mt-3 text-center">
+                          <span id="puertImageCounter">1 / 17</span> 
+                          <span>Puertas y ventanas - Ebanisteria y Carpinteria el Triangulo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnail-bar mt-2">
+                          <div class="thumbnail-container d-flex gap-2">
+                            <img class="thumbnail active" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas1.jpg" alt="Puertas_ventanas 1" data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas2.jpg" alt="Puertas_ventanas 2" data-index="1" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas3.jpg" alt="Puertas_ventanas 3" data-index="2" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas4.jpg" alt="Puertas_ventanas 4" data-index="3" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas5.jpg" alt="Puertas_ventanas 5" data-index="4" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas6.jpg" alt="Puertas_ventanas 6" data-index="5" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas7.jpg" alt="Puertas_ventanas 7" data-index="6" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas8.jpg" alt="Puertas_ventanas 8" data-index="7" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas9.jpg" alt="Puertas_ventanas 9" data-index="8" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas10.jpg" alt="Puertas_ventanas 10" data-index="9" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas11.jpg" alt="Puertas_ventanas 11" data-index="10" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas12.jpg" alt="Puertas_ventanas 12" data-index="11" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas13.jpg" alt="Puertas_ventanas 13" data-index="12" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas14.jpg" alt="Puertas_ventanas 14" data-index="13" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas15.jpg" alt="Puertas_ventanas 15" data-index="14" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas16.jpg" alt="Puertas_ventanas 16" data-index="15" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                            <img class="thumbnail" src="media/imagenes/galeria/gallery_puertas_ventanas_madera/Puertas_ventanas17.jpg" alt="Puertas_ventanas 17" data-index="16" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+          
         <!-- Controles de texto al final del carrusel -->
         <div class="d-flex justify-content-center mt-4">
           <button class="btn btn-link me-3 text-decoration-none" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev"> << Anterior
@@ -554,7 +731,7 @@
             <a class="footer-title" href="index.html"> <h1 class=" text-center">Ebanistería y Carpintería El Triángulo</h1> </a>
           </div>
           <div class="col-12 col-md-6 pt-3">
-            <ul class="list-unstyled d-flex align-items-center justify-content-center flex-wrap gap-4">
+            <ul class="list-unstyled d-flex align-items-center justify-content-center flex-wrap gap-3">
               <li class="footer-nav"><a href="index.html">Inicio</a></li>
               <li class="footer-nav"><a href="#sobre_nosotros">Sobre nosotros</a></li>
               <li class="footer-nav"><a href="#servicios">Servicios</a></li>

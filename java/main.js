@@ -116,8 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Llama a la función para cada modal con sus respectivos IDs
-  setupCarousel("comedorModal", "mainImage", "imageCounter", "prevBtn", "nextBtn");
+  setupCarousel("armariosModal", "armMainImage", "armImageCounter", "armprevBtn", "armnextBtn");
+  setupCarousel("bibliotecaModal", "biblMainImage", "biblImageCounter", "biblprevBtn", "biblnextBtn");
+  setupCarousel("cocinaModal", "cocMainImage", "cocImageCounter", "cocprevBtn", "cocnextBtn");
+  setupCarousel("comedorModal", "comMainImage", "comImageCounter", "comprevBtn", "comnextBtn");
   setupCarousel("dormitorioModal", "dormMainImage", "dormImageCounter", "dormprevBtn", "dormnextBtn");
+  setupCarousel("escalerasModal", "escMainImage", "escImageCounter", "escprevBtn", "escnextBtn");
+  setupCarousel("banosModall", "banMainImage", "banImageCounter", "banprevBtn", "bannextBtn");
+  setupCarousel("espejoModal", "espMainImage", "espImageCounter", "espprevBtn", "espnextBtn");
+  setupCarousel("puertas_ventanasModal", "puertMainImage", "puertImageCounter", "puertprevBtn", "puertnextBtn");
+
 });
 
 //Scroll tactil

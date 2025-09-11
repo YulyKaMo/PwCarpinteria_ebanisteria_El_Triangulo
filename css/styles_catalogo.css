@@ -234,8 +234,7 @@
   object-fit: contain;
 }
 
-#prevBtn,#dormprevBtn,
-#nextBtn,#dormnextBtn {
+.prevBtn, .nextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -247,15 +246,13 @@
   transition: color 0.3s; 
 }
 
-#prevBtn:hover,#dormprevBtn:hover,
-#nextBtn:hover, #dormnextBtn:hover {
+.prevBtn:hover, .nextBtn:hover{
   color: var(--color-primary);            
 }
 
 @media (max-width: 768px) {  /*rectangulo detras de flechas next y prev*/
 
-  #prevBtn::before,#dormprevBtn::before,
-  #nextBtn::before,#dormnextBtn::before {
+  .prevBtn::before, .nextBtn::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -267,13 +264,11 @@
     z-index: -1;     
   }
 
-  #prevBtn:hover::before,#dormprevBtn:hover::before,
-  #nextBtn:hover::before,#dormnextBtn:hover::before  {
+  .prevBtn:hover::before, .nextBtn:hover::before{
     background-color: rgba(255, 255, 255, 0.4);
   }
-
-  #prevBtn:hover,#dormprevBtn:hover,
-  #nextBtn:hover,#dormnextBtn:hover  {
+ 
+  .prevBtn:hover, .nextBtn:hover {
     color: var(--color-primary);
   }
 }
