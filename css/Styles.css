@@ -380,12 +380,20 @@ blockquote {
   }
 
 .seccion-contacto {
-  background-image: url(../media/imagenes/fondos/fondo-contacto.jpg); 
+  background-image: url(../media/imagenes/fondos/fondo-contacto.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding: 80px 0;
   position: relative;
+  background-attachment: scroll; /* Corrige el problema en móviles */
+}
+
+/* OPCIONAL: Solo en pantallas grandes el efecto fijo */
+@media (min-width: 768px) {
+  .seccion-contacto {
+    background-attachment: fixed;
+  }
 }
 
 .contacto-info {
@@ -398,7 +406,7 @@ blockquote {
   font-size: 1.4rem;
   color: var(--color_texts);
   padding: 0.2rem 0; 
-  padding-left: 10%;
+  padding-left: 2%;
 }
 
 .contacto-info .icono-blanco {
