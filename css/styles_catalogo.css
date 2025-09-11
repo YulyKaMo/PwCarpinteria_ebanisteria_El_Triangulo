@@ -312,13 +312,13 @@
 
 /*POLITICA DE PRIVACIDAD*/
 
-#politica-privacidad h2 {
-  color: #6b4c24; /* tono madera */
+#politica-privacidad h5 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-#politica-privacidad h5 {
-  font-size: 2rem;
-  margin-top: 1.5rem;
+#politica-privacidad li {
+  font-size: 1.2rem;
 }
 
 .btn-volver {

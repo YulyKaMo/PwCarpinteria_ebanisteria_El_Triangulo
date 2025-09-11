@@ -511,6 +511,15 @@ footer {
   color: var(--footer-bg);
 }
 
+.hover_gray {
+  color: #999!important;
+}
+
+.hover_gray:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none;
+}
+
 .btn-scroll-top {
   position: fixed;
   bottom: 30px;
