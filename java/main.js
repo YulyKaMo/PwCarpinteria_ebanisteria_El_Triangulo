@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Método 1: con evento oficial de Bootstrap
   carousel.addEventListener("slid.bs.carousel", () => {
     console.log("Slide changed event fired");
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth >= 768) {
       const yOffset = -20;
       const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: "instant" });
