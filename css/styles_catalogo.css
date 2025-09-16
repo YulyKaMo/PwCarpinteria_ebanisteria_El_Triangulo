@@ -234,7 +234,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  color: #aaa;            
+  color: var(--color-primary);            
   font-size: 1.2rem;
   background-color: transparent; /* Sin fondo por defecto */
   border: none;
@@ -242,7 +242,7 @@
 }
 
 .prevBtn:hover, .nextBtn:hover{
-  color: var(--color-primary);            
+  color: var(--color-hover);            
 }
 
 @media (max-width: 768px) {  /*rectangulo detras de flechas next y prev*/
@@ -264,7 +264,7 @@
   }
  
   .prevBtn:hover, .nextBtn:hover {
-    color: var(--color-primary);
+    color: var(--color-hover);
   }
 }
 

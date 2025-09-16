@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupCarousel("comedorModal", "comMainImage", "comImageCounter", "comprevBtn", "comnextBtn");
   setupCarousel("dormitorioModal", "dormMainImage", "dormImageCounter", "dormprevBtn", "dormnextBtn");
   setupCarousel("escalerasModal", "escMainImage", "escImageCounter", "escprevBtn", "escnextBtn");
-  setupCarousel("banosModall", "banMainImage", "banImageCounter", "banprevBtn", "bannextBtn");
+  setupCarousel("banosModal", "banMainImage", "banImageCounter", "banprevBtn", "bannextBtn");
   setupCarousel("espejoModal", "espMainImage", "espImageCounter", "espprevBtn", "espnextBtn");
   setupCarousel("puertas_ventanasModal", "puertMainImage", "puertImageCounter", "puertprevBtn", "puertnextBtn");
 
