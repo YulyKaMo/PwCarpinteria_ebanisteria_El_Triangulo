@@ -351,21 +351,23 @@
             <div class="modal-header border-0">
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
-            <div class="modal-body d-flex flex-column align-items-center">
+            <div class="modal-body d-flex flex-column justify-content-between align-items-center" style="height: 100vh; overflow: hidden;">
               <!-- Imagen principal -->
-              <div class="position-relative d-flex justify-content-center align-items-center" style="width: 80vw; max-height: 70vh;">
-                <img id="armMainImage" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
-                <button id="armprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn"><i class="fas fa-arrow-left"></i></button>
-               <button id="armnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn"><i class="fas fa-arrow-right"></i></button>
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center" style="max-height: 65vh;">
+                <div class="position-relative w-100 d-flex justify-content-center align-items-center"></div>
+                  <img id="armMainImage" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Imagen principal" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
+                  <button id="armprevBtn" class="btn btn-link start-0 translate-middle-y prevBtn"><i class="fas fa-arrow-left"></i></button>
+                  <button id="armnextBtn" class="btn btn-link end-0 translate-middle-y nextBtn"><i class="fas fa-arrow-right"></i></button>
+                </div>
               </div>
               <!-- Descripción -->
-              <div class="mt-3 text-center">
+              <div class="mt-3 text-center small">
                 <span id="armImageCounter">1 / 11</span> 
                 <span>Armarios y closets - Ebanisteria y Carpinteria el Triangulo</span>
               </div>
               <!-- Thumbnails -->
-              <div class="thumbnail-bar mt-2">
-                <div class="thumbnail-container d-flex gap-2">
+              <div class="thumbnail-bar w-100 px-3 pt-2 pb-3" style="overflow-x: auto">
+                <div class="thumbnail-container d-flex flex-nowrap gap-2">
                   <img class="thumbnail active" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario1_clásico_en_color_nogal.jpg" alt="Clóset de madera estilo clásico en color nogal, con puertas molduradas, cajones centrales y compartimientos superiores, equipado con manijas metálicas rectos."
                     data-index="0" style="width: 100px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer;">
                   <img class="thumbnail" src="media/imagenes/galeria/gallery_armarios_closets_madera/armario2_clasico_color_caoba.jpg" alt="Armario clóset de madera estilo clásico en color caoba, con puertas de diseño en relieve, cajones centrales y espacio abierto para televisor." 
