@@ -271,6 +271,19 @@
   .prevBtn:hover, .nextBtn:hover {
     color: var(--color-primary);
   }
+
+  .modal-body img {
+    max-height: 70vh !important;
+  }
+
+  .thumbnail-container {
+    height: 90px;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 70px;
+  }
 }
 
 .thumbnail-bar {
