@@ -22,26 +22,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById("cardCarousel");
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("cardCarousel");
 
-    if (carousel) {
-      // Escucha el evento de cambio de slide
-      carousel.addEventListener("slid.bs.carousel", () => {
-        // Verifica si estamos en móvil (opcional)
-        if (window.innerWidth <= 768) {
-          // Scroll al inicio del carrusel
-          const yOffset = -20; // Ajusta si hay barra fija o margen
-          const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
+  if (!carousel) return;
 
-          window.scrollTo({
-            top: y,
-            behavior: "instant" // Usa "smooth" si quieres transición suave
-          });
-        }
-      });
+  // Método 1: con evento oficial de Bootstrap
+  carousel.addEventListener("slid.bs.carousel", () => {
+    console.log("Slide changed event fired");
+    if (window.innerWidth <= 768) {
+      const yOffset = -20;
+      const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "instant" });
+      console.log("ScrollTo (slid):", y);
     }
   });
+
+  // Método 2: con clic en botones prev/next (fallback)
+  const botones = document.querySelectorAll("[data-bs-target='#cardCarousel']");
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      console.log("Botón prev/next clickeado");
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          const yOffset = -20;
+          const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "instant" });
+          console.log("ScrollTo (botón):", y);
+        }, 300);
+      }
+    });
+  });
+});
+
 
 
 /*MENU LATERAL*/
