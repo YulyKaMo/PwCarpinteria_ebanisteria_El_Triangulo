@@ -224,11 +224,6 @@
 
 /*MODAL*/
 
-.modal-dialog {
-  margin: 0;
-  max-width: 100%;
-}
-
 .modal-body img {
   max-height: 80%;
   object-fit: contain;
@@ -270,19 +265,6 @@
  
   .prevBtn:hover, .nextBtn:hover {
     color: var(--color-primary);
-  }
-
-  .modal-body img {
-    max-height: 50vh !important;
-  }
-
-  .thumbnail-container {
-    height: 80px;
-  }
-
-  .thumbnail {
-    width: 80px;
-    height: 60px;
   }
 }
 
