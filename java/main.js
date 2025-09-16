@@ -22,38 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.getElementById("cardCarousel");
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.getElementById("cardCarousel");
+    if (!carousel) return;
 
-  if (!carousel) return;
-
-  // Método 1: con evento oficial de Bootstrap
-  carousel.addEventListener("slid.bs.carousel", () => {
-    console.log("Slide changed event fired");
-    if (window.innerWidth >= 768) {
-      const yOffset = -20;
+    // Función para saltar al inicio del carrusel
+    function scrollToCarouselStart() {
+      const yOffset = 0;  // ajusta si tienes un navbar fijo: puede ser -50, por ejemplo.
       const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: "instant" });
-      console.log("ScrollTo (slid):", y);
     }
-  });
 
-  // Método 2: con clic en botones prev/next (fallback)
-  const botones = document.querySelectorAll("[data-bs-target='#cardCarousel']");
-  botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-      console.log("Botón prev/next clickeado");
+    // 1) Escucha el evento 'slid.bs.carousel' de Bootstrap (cuando el slide ya cambió)
+    carousel.addEventListener("slid.bs.carousel", function() {
+      // Opcional: comprueba ancho de pantalla si quieres que solo en móviles
       if (window.innerWidth <= 768) {
-        setTimeout(() => {
-          const yOffset = -20;
-          const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
-          window.scrollTo({ top: y, behavior: "instant" });
-          console.log("ScrollTo (botón):", y);
-        }, 300);
+        scrollToCarouselStart();
       }
     });
+
+    // 2) Respaldo: en los botones prev/next, tras un retraso
+    const botones = document.querySelectorAll("[data-bs-target='#cardCarousel'][data-bs-slide]");
+    botones.forEach(function(boton) {
+      boton.addEventListener("click", function() {
+        if (window.innerWidth <= 768) {
+          setTimeout(scrollToCarouselStart, 300);  // 300ms para dar tiempo al slide
+        }
+      });
+    });
   });
-});
 
 
 
