@@ -181,23 +181,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-//Scroll tactil
+ // ✅ Soporte para scroll táctil horizontal en thumbnails (opcional)
+  const sliders = document.querySelectorAll(".thumbnail-container");
 
-slider.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].pageX;
-  scrollLeft = slider.scrollLeft;
-  lastStep = 0;
-});
+  sliders.forEach(slider => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-slider.addEventListener('touchmove', (e) => {
-  e.preventDefault();
+    slider.addEventListener("touchstart", (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX;
+      scrollLeft = slider.scrollLeft;
+    });
 
-  const deltaX = e.touches[0].pageX - startX;
-  const stepsMoved = Math.floor(deltaX / stepSize);
+    slider.addEventListener("touchmove", (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX;
+      const walk = (startX - x); // cuánto se mueve el dedo
+      slider.scrollLeft = scrollLeft + walk;
+    });
 
-  if (stepsMoved !== lastStep) {
-    const stepDiff = stepsMoved - lastStep;
-    slider.scrollLeft = scrollLeft - stepDiff * stepSize;
-    lastStep = stepsMoved;
-  }
-});
+    slider.addEventListener("touchend", () => {
+      isDown = false;
+    });
+  });
+
