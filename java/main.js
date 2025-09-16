@@ -138,8 +138,15 @@ document.addEventListener("DOMContentLoaded", function () {
         thumbnails.forEach(thumb => thumb.classList.remove("active"));
         selectedThumbnail.classList.add("active");
 
-        currentIndex = index;
-      }
+      // ✅ Scroll al thumbnail activo
+      selectedThumbnail.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+      });
+
+      currentIndex = index;
+    }
 
       thumbnails.forEach((thumb, index) => {
         thumb.addEventListener("click", () => updateMainImage(index));
