@@ -229,10 +229,6 @@
   max-width: 100%;
 }
 
-.modal-body {
-  overflow-y: auto;
-}
-
 .modal-body img {
   max-height: 80%;
   object-fit: contain;
@@ -281,7 +277,7 @@
   }
 
   .thumbnail-container {
-    height: 90px;
+    height: 80px;
   }
 
   .thumbnail {
