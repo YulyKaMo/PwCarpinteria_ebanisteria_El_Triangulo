@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const imageCounter = document.getElementById(counterId);
       const prevBtn = document.getElementById(prevBtnId);
       const nextBtn = document.getElementById(nextBtnId);
+      const thumbnailContainer = modal.querySelector(".thumbnail-bar");
 
       if (!mainImage || !imageCounter || !prevBtn || !nextBtn) return;
 
@@ -130,6 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalImages = thumbnails.length;
 
       function updateMainImage(index) {
+      if (index < 0 || index >= totalImages) return;
+
       const selectedThumbnail = thumbnails[index];
       if (!selectedThumbnail) return;
 
@@ -140,32 +143,47 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbnails.forEach(thumb => thumb.classList.remove("active"));
       selectedThumbnail.classList.add("active");
 
-      // ✅ Scroll el thumbnail activo al centro
-      selectedThumbnail.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest"
-      });
+      // Centra el thumbnail visible
+      scrollThumbnailIntoView(selectedThumbnail, thumbnailContainer);
 
       currentIndex = index;
       }
 
+      function scrollThumbnailIntoView(thumbnail, container) {
+        try {
+          // Opción más compatible con móviles
+          const containerRect = container.getBoundingClientRect();
+          const thumbRect = thumbnail.getBoundingClientRect();
+          const offset = thumbRect.left - containerRect.left - (container.clientWidth / 2) + (thumbRect.width / 2);
+
+          container.scrollBy({ left: offset, behavior: 'smooth' });
+        } catch (error) {
+          // Fallback a scrollIntoView si falla el cálculo
+          thumbnail.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      }
+
+
+      // Navegación por thumbnails
       thumbnails.forEach((thumb, index) => {
         thumb.addEventListener("click", () => updateMainImage(index));
       });
-
-      nextBtn.addEventListener("click", () => {
+       
+      // Botón siguiente
+      nextBtn.addEventListener("click", () => { 
         let newIndex = currentIndex + 1;
         if (newIndex >= totalImages) newIndex = 0;
         updateMainImage(newIndex);
       });
 
+      // Botón anterior
       prevBtn.addEventListener("click", () => {
         let newIndex = currentIndex - 1;
         if (newIndex < 0) newIndex = totalImages - 1;
         updateMainImage(newIndex);
       });
 
+      // Inicializa con la primera imagen
       updateMainImage(0);
     });
   }
