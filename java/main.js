@@ -3,23 +3,41 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   // Iniciar el primer video
-  videos[currentIndex].play();
+  if (videos.length > 0) {
+    videos[currentIndex].play();
+  }
 
   videos.forEach((video, index) => {
     video.addEventListener("ended", () => {
-      // Ocultar el video actual
       video.classList.remove("active");
-
-      // Pasar al siguiente (cíclico)
       currentIndex = (index + 1) % videos.length;
-
-      // Mostrar el siguiente
       const nextVideo = videos[currentIndex];
       nextVideo.classList.add("active");
       nextVideo.play();
     });
   });
+
+  // --- SALTO AUTOMÁTICO AL INICIO DEL CARRUSEL EN MÓVILES ---
+  const carousel = document.querySelector("#cardCarousel");
+
+  if (carousel) {
+    carousel.addEventListener("slid.bs.carousel", () => {
+      // Solo en pantallas móviles
+      if (window.innerWidth < 768) {
+        // Scroll al inicio del carrusel
+        const yOffset = -10; // Ajusta si tienes un navbar fijo
+        const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "instant" // Sin animación (puede que se ignore en algunos navegadores)
+        });
+      }
+    });
+  }
 });
+
+
 
 
 /*MENU LATERAL*/
