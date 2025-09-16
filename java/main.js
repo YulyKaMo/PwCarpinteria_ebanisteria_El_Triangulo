@@ -22,38 +22,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.getElementById("cardCarousel");
     if (!carousel) return;
 
-    // Función para saltar al inicio del carrusel
-    function scrollToCarouselStart() {
-      const yOffset = 20;  // ajusta si tienes un navbar fijo: puede ser -50, por ejemplo.
-      const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    const topOffset = -10; // Ajusta si hay navbar fija, etc.
 
-    // Solo en móviles
+    // Detectar si es móvil
     function isMobile() {
       return window.innerWidth <= 768;
     }
 
-    // Al terminar la transición del slide
+    // Hacer scroll suave al carrusel
+    function scrollToCarouselStart() {
+      const y = carousel.getBoundingClientRect().top + window.scrollY + topOffset;
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });
+    }
+
+    // 1. Al terminar la transición del carrusel
     carousel.addEventListener("slid.bs.carousel", function () {
-      if (isMobile()) scrollToCarouselStart();
+      if (isMobile()) {
+        scrollToCarouselStart();
+      }
     });
 
-    // 2) Respaldo: en los botones prev/next, tras un retraso
-    const botones = document.querySelectorAll("[data-bs-target='#cardCarousel'][data-bs-slide]");
-    botones.forEach(function(boton) {
-      boton.addEventListener("click", function() {
+    // 2. Prevención adicional si el evento no se dispara
+    const controls = document.querySelectorAll("[data-bs-target='#cardCarousel'][data-bs-slide]");
+    controls.forEach(control => {
+      control.addEventListener("click", () => {
         if (isMobile()) {
-          setTimeout(scrollToCarouselStart, 300);  // 300ms para dar tiempo al slide
+          setTimeout(scrollToCarouselStart, 500); // le da tiempo a la transición
         }
       });
     });
-  });
 
+    // 3. Corrige comportamiento cuando se redimensiona
+    window.addEventListener("resize", () => {
+      if (!isMobile()) {
+        // Nada que hacer en desktop
+        return;
+      }
+    });
+  });
 
 /*MENU LATERAL*/
 
