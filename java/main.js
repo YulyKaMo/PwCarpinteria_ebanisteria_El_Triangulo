@@ -28,30 +28,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para saltar al inicio del carrusel
     function scrollToCarouselStart() {
-      const yOffset = 0;  // ajusta si tienes un navbar fijo: puede ser -50, por ejemplo.
+      const yOffset = 20;  // ajusta si tienes un navbar fijo: puede ser -50, por ejemplo.
       const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "instant" });
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
 
-    // 1) Escucha el evento 'slid.bs.carousel' de Bootstrap (cuando el slide ya cambió)
-    carousel.addEventListener("slid.bs.carousel", function() {
-      // Opcional: comprueba ancho de pantalla si quieres que solo en móviles
-      if (window.innerWidth <= 768) {
-        scrollToCarouselStart();
-      }
+    // Solo en móviles
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    // Al terminar la transición del slide
+    carousel.addEventListener("slid.bs.carousel", function () {
+      if (isMobile()) scrollToCarouselStart();
     });
 
     // 2) Respaldo: en los botones prev/next, tras un retraso
     const botones = document.querySelectorAll("[data-bs-target='#cardCarousel'][data-bs-slide]");
     botones.forEach(function(boton) {
       boton.addEventListener("click", function() {
-        if (window.innerWidth <= 768) {
+        if (isMobile()) {
           setTimeout(scrollToCarouselStart, 300);  // 300ms para dar tiempo al slide
         }
       });
     });
   });
-
 
 
 /*MENU LATERAL*/
