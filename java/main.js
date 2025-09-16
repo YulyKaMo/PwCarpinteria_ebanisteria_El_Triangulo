@@ -19,22 +19,29 @@ document.addEventListener("DOMContentLoaded", () => {
       nextVideo.play();
     });
   });
-
-  // --------- Forzar salto al inicio de la sección en móviles ----------
-  const seccion = document.getElementById("catalogo_muebles");
-  const botones = document.querySelectorAll("[data-bs-target='#cardCarousel']");
-
-  botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-      if (window.innerWidth < 768) {
-        const yOffset = -10; // Puedes ajustar esto si hay margen
-        const y = seccion.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo(0, y); // Salto sin animación
-      }
-    });
-  });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("cardCarousel");
+
+    if (carousel) {
+      // Escucha el evento de cambio de slide
+      carousel.addEventListener("slid.bs.carousel", () => {
+        // Verifica si estamos en móvil (opcional)
+        if (window.innerWidth <= 768) {
+          // Scroll al inicio del carrusel
+          const yOffset = -20; // Ajusta si hay barra fija o margen
+          const y = carousel.getBoundingClientRect().top + window.scrollY + yOffset;
+
+          window.scrollTo({
+            top: y,
+            behavior: "instant" // Usa "smooth" si quieres transición suave
+          });
+        }
+      });
+    }
+  });
 
 
 /*MENU LATERAL*/
