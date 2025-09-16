@@ -130,15 +130,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalImages = thumbnails.length;
 
       function updateMainImage(index) {
-        const selectedThumbnail = thumbnails[index];
-        mainImage.src = selectedThumbnail.src;
-        mainImage.alt = selectedThumbnail.alt;
-        imageCounter.textContent = `${index + 1} / ${totalImages}`;
+      const selectedThumbnail = thumbnails[index];
+      if (!selectedThumbnail) return;
 
-        thumbnails.forEach(thumb => thumb.classList.remove("active"));
-        selectedThumbnail.classList.add("active");
+      mainImage.src = selectedThumbnail.src;
+      mainImage.alt = selectedThumbnail.alt;
+      imageCounter.textContent = `${index + 1} / ${totalImages}`;
 
-      // ✅ Scroll al thumbnail activo
+      thumbnails.forEach(thumb => thumb.classList.remove("active"));
+      selectedThumbnail.classList.add("active");
+
+      // ✅ Scroll el thumbnail activo al centro
       selectedThumbnail.scrollIntoView({
         behavior: "smooth",
         inline: "center",
@@ -146,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       currentIndex = index;
-    }
+      }
 
       thumbnails.forEach((thumb, index) => {
         thumb.addEventListener("click", () => updateMainImage(index));
