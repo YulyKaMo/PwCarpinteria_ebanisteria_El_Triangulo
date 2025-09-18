@@ -151,6 +151,7 @@ h2::after {
   font-weight: 400;
   letter-spacing: 0.3px;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   transition: color 0.3s ease, transform 0.3s ease, color 0.3s ease;
   z-index: 0;
@@ -303,7 +304,8 @@ blockquote {
   position: relative;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* Safari */
+  backdrop-filter: blur(2px);  
   height: 100%;
 }
 
@@ -398,7 +400,8 @@ blockquote {
 
 .contacto-info {
   background-color: rgba(244, 211, 94, 0.4); 
-  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(3px); /* Safari */
+  backdrop-filter: blur(3px);   
   color: white;
 }
 
