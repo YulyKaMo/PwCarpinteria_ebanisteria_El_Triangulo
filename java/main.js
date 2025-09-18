@@ -227,3 +227,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+    document.getElementById('FormContact').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+    const mensaje = document.getElementById('mensajeEnvio');
+
+    try {
+      const response = await fetch('https://carpinteriaeltriangulo.com/api/contacto', {
+        method: 'POST',
+        body: data,
+      });
+
+      mensaje.style.display = 'block';
+
+      if (response.ok) {
+        mensaje.textContent = '¡Mensaje enviado correctamente!';
+        mensaje.style.color = 'green';
+        form.reset();
+      } else {
+        mensaje.textContent = 'Hubo un error al enviar el mensaje. Intenta más tarde.';
+        mensaje.style.color = 'red';
+      }
+
+    } catch (error) {
+      mensaje.style.display = 'block';
+      mensaje.textContent = 'Error de conexión. Verifica tu red o intenta de nuevo.';
+      mensaje.style.color = 'red';
+      console.error(error);
+    }
+  });

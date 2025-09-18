@@ -118,12 +118,12 @@
             <!-- Columna: Textos -->
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 pe-md-5">
               <h2 class="pb-4 pt-5 fw-bold text-uppercase fade-slide-up"> Diseños únicos en madera </h2>
-              <p class="text-justify pb-3 card-animada  style=" style="--delay: 0s;">
+              <p class="text-justify pb-3 card-animada" style="--delay: 0s;">
                 Con más de 20 años de experiencia, en Ebanistería y Carpintería El Triángulo transformamos sueños en realidad. 
                 Creamos soluciones a medida que no solo se adaptan a los espacios, sino que los llenan de vida. 
                 Cada proyecto es único, donde el diseño se une de forma natural con la funcionalidad y una calidad que se siente y perdura.
               </p>
-              <p class="text-justify pb-3  card-animada  style=" style="--delay: 3s;">
+              <p class="text-justify pb-3  card-animada" style="--delay: 3s;">
                Nuestro trabajo convierte la madera en arte. Seleccionamos materiales de primera y cuidamos cada detalle con dedicación, desde 
                el primer boceto hasta la instalación final. El resultado: piezas duraderas, hechas a mano, que no solo lucen bien, 
                sino que también funcionan a la perfección en tu día a día.
@@ -248,11 +248,11 @@
             <!-- Columna Derecha: Formulario -->
             <div class="col-md-7 contacto-formulario d-flex flex-column justify-content-center p-4">
 
-              <form class="ms-4 me-4" action="https://formspree.io/f/mblabgyq" method="POST">
+              <form class="ms-4 me-4" method="POST" id="FormContact">
                 <h4 class="text-center pt-2">¿Te interesa nuestro trabajo o tienes alguna duda?</h4>
                 <p class="text-center fs-5 pb-3">Déjanos tus datos y te contactaremos pronto.</p>
 
-                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre y apellidos" title=" Escribe tu nombre completo">
+                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre y apellidos" title=" Escribe tu nombre completo" required>
 
                 <div class="row telefono">
                   <div class="col-4 col-sm-3 col-md-2">
@@ -267,20 +267,24 @@
                 <input type="email" class="form-control mb-3" name="email" placeholder="Correo electrónico"
                   title="Ingresa tu dirección de correo electrónico (ej: nombre@ejemplo.com)" required>
 
-                <select class="form-select mb-3" required>
+                <select class="form-select mb-3" name="servicio" required>
                   <option selected disabled>Selecciona un servicio</option>
-                  <option>Carpintería general</option>
-                  <option>Diseño personalizado</option>
+                  <option value="Carpinteria general">Carpintería general</option>
+                  <option value="Diseño personalizado">Diseño personalizado</option>
                 </select>
 
-                <textarea class="form-control mb-3" rows="3" placeholder="Déjanos tu mensaje (opcional)"></textarea>
+                <textarea class="form-control mb-3" name="mensaje" rows="3" placeholder="Déjanos tu mensaje (opcional)"></textarea>
 
                 <div class="form-check mb-3">
-                  <input type="checkbox" class="form-check-input" name="politica_privacidad" id="politica_privacidad" checked>
+                  <input type="checkbox" class="form-check-input" name="politica_privacidad" id="politica_privacidad" checked required>
                     <label class="form-check-label" for="politica_privacidad">
                       He leído y acepto las <a href="politica_privacidad.html" class="punteado" target="_blank">Políticas de Privacidad</a>
                     </label>
                 </div>
+
+                <!-- MENSAJE DE RESPUESTA -->
+                <div id="mensajeEnvio" class="mb-3" style="display:none;"></div>
+
                 <div class="d-flex justify-content-end">
                   <button type="submit" class="btn text-white btn-enviar">ENVIAR</button>
                 </div>
