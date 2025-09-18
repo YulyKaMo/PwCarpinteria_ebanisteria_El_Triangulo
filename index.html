@@ -248,23 +248,23 @@
             <!-- Columna Derecha: Formulario -->
             <div class="col-md-7 contacto-formulario d-flex flex-column justify-content-center p-4">
 
-              <form class="ms-4 me-4" method="POST" id="FormContact">
+              <form class="ms-2 me-2" method="POST" id="FormContact">
                 <h4 class="text-center pt-2">¿Te interesa nuestro trabajo o tienes alguna duda?</h4>
                 <p class="text-center fs-5 pb-3">Déjanos tus datos y te contactaremos pronto.</p>
 
-                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre y apellidos" title=" Escribe tu nombre completo" required>
+                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre y apellidos*" title=" Escribe tu nombre completo" required>
 
                 <div class="row telefono">
-                  <div class="col-4 col-sm-3 col-md-2">
+                  <div class="col-3 col-md-2">
                     <input type="text" class="form-control mb-3" id="indicativo" name="indicativo" placeholder="+57" value="+57" readonly>
                   </div>
-                  <div class="col-8 col-sm-9 col-md-10">
-                    <input type="tel" class="form-control mb-3" name="telefono" placeholder="Teléfono" pattern="^[3][0-9]{9}$" maxlength="10"
+                  <div class="col-9 col-md-10">
+                    <input type="tel" class="form-control mb-3" name="telefono" placeholder="Teléfono*" pattern="^[3][0-9]{9}$" maxlength="10"
                     title="Numero de telefono debe comenzar con 3 y contener 10 digitos" required>
                   </div>
                 </div>
 
-                <input type="email" class="form-control mb-3" name="email" placeholder="Correo electrónico"
+                <input type="email" class="form-control mb-3" name="email" placeholder="Correo electrónico*"
                   title="Ingresa tu dirección de correo electrónico (ej: nombre@ejemplo.com)" required>
 
                 <select class="form-select mb-3" name="servicio" required>
